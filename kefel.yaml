@@ -1,0 +1,92 @@
+openapi: 3.0.1
+info:
+  title: kefel APIs
+  description: kefel APIs
+  version: v1.0.0
+servers:
+  - url: http://develop:8600/js/dev/irest
+security:
+  - basicAuth: []
+  - bearerAuth: []
+tags:
+  - name: KEFEL
+    description: kefel APIs
+paths:
+  /KEFEL/firstNum/{firstNum}:
+    get:
+      tags:
+        - KEFEL
+      description: kefel APIs
+      operationId: KEFEL
+      parameters:
+        - name: firstNum
+          in: path
+          description: first number
+          required: true
+          schema:
+            type: integer
+            maximum: 9999999999
+        - name: second
+          in: query
+          description: second
+          required: true
+          schema:
+            type: integer
+            maximum: 9999999999
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/kefelOutput'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceResult'
+        '401':
+          description: Authentication information is missing or invalid
+          content: {}
+        '404':
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceResult'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceResult'
+      security:
+        - basicAuth: []
+        - bearerAuth: []
+components:
+  schemas:
+    serviceResult:
+      type: object
+      properties:
+        returnCode:
+          type: number
+        returnMessage:
+          type: string
+    kefelOutput:
+      type: object
+      properties:
+        serviceResult:
+          $ref: '#/components/schemas/serviceResult'
+        z:
+          description: z
+          type: integer
+          maximum: 9999999999
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
