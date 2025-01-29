@@ -9,7 +9,7 @@ public class readmail {
 	public static void main(String[] args) throws Exception {
 		Store s = Session.getInstance(System.getProperties(), null).getStore(
 				"pop3");
-		s.connect("mail.bezeqint.net", "zvirt", "mchruy");
+		s.connect("mail.bezeqint.net", "user", "pass");
 		//System.out.println("s.getDefaultFolder() " +s.getDefaultFolder());
 		Folder f = s.getFolder("inbox");
 		
