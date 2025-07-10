@@ -4,3 +4,18 @@ Cannot complete the install because one or more required items could not be foun
   Cannot satisfy dependency:
     From: Assist AI 1.0.6.202504291308 (com.github.gradusnikov.eclipse.assistai.feature.group 1.0.6.202504291308)
     To: org.eclipse.equinox.p2.iu; com.github.gradusnikov.eclipse.plugin.assistai.dependencies [1.0.6.202504291308,1.0.6.202504291308]
+
+
+# הורד את הספרייה
+wget https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar
+# הורד את bnd
+wget https://github.com/bndtools/bnd/releases/download/5.3.0/bnd-5.3.0.jar -O bnd.jar
+# הפוך את הספרייה ל-bundle של OSGi באמצעות Bnd
+java -jar bnd.jar wrap slf4j-api-2.0.16.jar -o slf4j-api-2.0.16-osgi.jar
+# מצא את תיקיית ההתקנה של Eclipse (לדוגמה, /opt/eclipse)
+ECLIPSE_DIR="/opt/eclipse"
+# העתק את הספרייה לתיקיית plugins
+cp slf4j-api-2.0.16-osgi.jar $ECLIPSE_DIR/plugins/
+# הפעל מחדש את Eclipse
+$ECLIPSE_DIR/eclipse
+
