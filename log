@@ -1,0 +1,6 @@
+Cannot complete the install because one or more required items could not be found.
+  Software being installed: Assist AI 1.0.6.202504291308 (com.github.gradusnikov.eclipse.assistai.feature.group 1.0.6.202504291308)
+  Missing requirement: assistai-dependencies 1.0.6.202504291308 (com.github.gradusnikov.eclipse.plugin.assistai.dependencies 1.0.6.202504291308) requires 'osgi.bundle; slf4j.api 2.0.16' but it could not be found
+  Cannot satisfy dependency:
+    From: Assist AI 1.0.6.202504291308 (com.github.gradusnikov.eclipse.assistai.feature.group 1.0.6.202504291308)
+    To: org.eclipse.equinox.p2.iu; com.github.gradusnikov.eclipse.plugin.assistai.dependencies [1.0.6.202504291308,1.0.6.202504291308]
