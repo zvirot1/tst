@@ -1,0 +1,20 @@
+אופציה 1: Visual Studio Marketplace
+
+לך ל: https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2022
+
+הורד את הגרסה העדכנית
+
+אופציה 2: דרך Visual Studio
+
+פתח Visual Studio Professional 2022
+
+Extensions → Manage Extensions
+
+חפש "AWS Toolkit"
+
+התקן ישירות
+
+אופציה 3: GitHub Releases
+
+לך ל: https://github.com/aws/aws-toolkit-visual-studio
+
