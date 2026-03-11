@@ -1,0 +1,2223 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ODS-API",
+    "version": "0.0.1"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Root  Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ping": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Ping",
+        "description": "Test endpoint for service verification.\n\nArgs:\n    _request (Request): FastAPI request object\n\nReturns:\n    dict: Test status response",
+        "operationId": "ping_api_v1_ping_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Ping Api V1 Ping Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/retirementConversion/insuredStatuses": {
+      "post": {
+        "tags": [
+          "retirementConversion"
+        ],
+        "summary": "Get all person IDs",
+        "description": "Returns all person IDs from processes.",
+        "operationId": "get_insuree_ids_api_v1_retirementConversion_insuredStatuses_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetInsureeIdsRequest"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsuredIdsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid date range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User/policy not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Query throttled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Query failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Query timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/retirementConversion/getInsuredStatuses": {
+      "post": {
+        "tags": [
+          "retirementConversion"
+        ],
+        "summary": "Get process records by person and date range",
+        "description": "Returns all process records for the specified **person `insuredId`** between optional startDate and endDate. Dates must be format: `YYYY-MM-DD`.",
+        "operationId": "get_insuree_id_api_v1_retirementConversion_getInsuredStatuses_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetInsureeRequest"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsuredStatusesResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid date range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User/policy not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Query throttled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Query failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Query timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/retirementConversion/getProcessById": {
+      "post": {
+        "tags": [
+          "retirementConversion"
+        ],
+        "summary": "Get specific process by ID (POST)",
+        "description": "Returns specific process by **process ID** with full event history.",
+        "operationId": "get_process_by_id_post_api_v1_retirementConversion_getProcessById_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetProcessByIdRequest"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcessByIdResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid date range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User/policy not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Query throttled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Query failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Query timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/retirementConversion/sendMessageToQueue": {
+      "post": {
+        "tags": [
+          "retirementConversion"
+        ],
+        "summary": "Send message to SQS queue",
+        "description": "Receives a typed polymorphic Process (oneOf + discriminator=processType) and sends it to SQS",
+        "operationId": "send_message_to_queue_api_v1_retirementConversion_sendMessageToQueue_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/ImmediateRetirementProcess"
+                  },
+                  {
+                    "$ref": "#/components/schemas/NiudProcess"
+                  },
+                  {
+                    "$ref": "#/components/schemas/PolicyIssuanceProcess"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ClaimProcess"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SendMessageResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid date range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User/policy not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Query throttled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Query failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Query timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/retirementConversion/sendClaimToQueue": {
+      "post": {
+        "tags": [
+          "retirementConversion"
+        ],
+        "summary": "Send claim message to SQS queue",
+        "description": "Receives a Claim process and sends it to SQS queue",
+        "operationId": "send_claim_to_queue_api_v1_retirementConversion_sendClaimToQueue_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ClaimProcess"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SendMessageResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid date range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User/policy not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Query throttled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Query failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Query timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Health check endpoint to verify service status.\n\nArgs:\n    _request (Request): FastAPI request object\n\nReturns:\n    dict: Health status response",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/readiness": {
+      "get": {
+        "summary": "Ready",
+        "description": "Readiness probe endpoint for kubernetes/deployment health checks.\n\nArgs:\n    _request (Request): FastAPI request object\n\nReturns:\n    dict: Readiness status response",
+        "operationId": "ready_readiness_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdditionalData": {
+        "properties": {
+          "eligibilityDate": {
+            "title": "Eligibilitydate",
+            "type": "string",
+            "nullable": true
+          },
+          "suspendedFutureRedemption": {
+            "title": "Suspendedfutureredemption",
+            "type": "string",
+            "nullable": true
+          },
+          "convertedAmount": {
+            "title": "Convertedamount",
+            "type": "number",
+            "nullable": true
+          },
+          "transactionDate": {
+            "title": "Transactiondate",
+            "type": "string",
+            "nullable": true
+          },
+          "receivingType": {
+            "title": "Receivingtype",
+            "type": "string",
+            "nullable": true
+          },
+          "bankDetails": {
+            "$ref": "#/components/schemas/BankDetails",
+            "nullable": true
+          },
+          "agentDetails": {
+            "$ref": "#/components/schemas/AgentDetails",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "AdditionalData",
+        "description": "Additional process data"
+      },
+      "AgentDetails": {
+        "properties": {
+          "agentNumber1": {
+            "title": "Agentnumber1",
+            "type": "integer",
+            "nullable": true
+          },
+          "agentName1": {
+            "title": "Agentname1",
+            "type": "string",
+            "nullable": true
+          },
+          "agentNumber2": {
+            "title": "Agentnumber2",
+            "type": "integer",
+            "nullable": true
+          },
+          "agentName2": {
+            "title": "Agentname2",
+            "type": "string",
+            "nullable": true
+          },
+          "supervisorNumber1": {
+            "title": "Supervisornumber1",
+            "type": "integer",
+            "nullable": true
+          },
+          "supervisorName1": {
+            "title": "Supervisorname1",
+            "type": "string",
+            "nullable": true
+          },
+          "supervisorNumber2": {
+            "title": "Supervisornumber2",
+            "type": "integer",
+            "nullable": true
+          },
+          "supervisorName2": {
+            "title": "Supervisorname2",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "AgentDetails",
+        "description": "Agent and supervisor details"
+      },
+      "BankDetails": {
+        "properties": {
+          "bankNumber": {
+            "title": "Banknumber",
+            "type": "integer",
+            "nullable": true
+          },
+          "branchNumber": {
+            "title": "Branchnumber",
+            "type": "integer",
+            "nullable": true
+          },
+          "accountNumber": {
+            "title": "Accountnumber",
+            "type": "integer",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "BankDetails",
+        "description": "Bank account details"
+      },
+      "ClaimData": {
+        "properties": {
+          "SourceSystem": {
+            "title": "Sourcesystem",
+            "type": "string",
+            "nullable": true
+          },
+          "processId": {
+            "title": "Processid",
+            "type": "integer",
+            "nullable": true
+          },
+          "statusCode": {
+            "title": "Statuscode",
+            "type": "integer",
+            "nullable": true
+          },
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "statusDate": {
+            "title": "Statusdate",
+            "type": "string",
+            "nullable": true
+          },
+          "personId": {
+            "title": "Personid",
+            "type": "integer",
+            "nullable": true
+          },
+          "companyCode": {
+            "title": "Companycode",
+            "type": "integer",
+            "nullable": true
+          },
+          "processType": {
+            "title": "Processtype",
+            "type": "integer",
+            "nullable": true
+          },
+          "processName": {
+            "title": "Processname",
+            "type": "string",
+            "nullable": true
+          },
+          "claimNum": {
+            "title": "Claimnum",
+            "type": "integer",
+            "nullable": true
+          },
+          "claimFilingDate": {
+            "title": "Claimfilingdate",
+            "type": "string",
+            "nullable": true
+          },
+          "contimueClaim": {
+            "title": "Contimueclaim",
+            "type": "integer",
+            "nullable": true
+          },
+          "insuredName": {
+            "title": "Insuredname",
+            "type": "string",
+            "nullable": true
+          },
+          "filingClaimName": {
+            "title": "Filingclaimname",
+            "type": "string",
+            "nullable": true
+          },
+          "filingClaimID": {
+            "title": "Filingclaimid",
+            "type": "integer",
+            "nullable": true
+          },
+          "agreementNum": {
+            "title": "Agreementnum",
+            "type": "integer",
+            "nullable": true
+          },
+          "agreementDescription": {
+            "title": "Agreementdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "rejectionCode": {
+            "title": "Rejectioncode",
+            "type": "integer",
+            "nullable": true
+          },
+          "rejectionDescription": {
+            "title": "Rejectiondescription",
+            "type": "string",
+            "nullable": true
+          },
+          "agentNumber": {
+            "title": "Agentnumber",
+            "type": "integer",
+            "nullable": true
+          },
+          "agentName": {
+            "title": "Agentname",
+            "type": "string",
+            "nullable": true
+          },
+          "OpeningSource": {
+            "title": "Openingsource",
+            "type": "integer",
+            "nullable": true
+          },
+          "colorRoute": {
+            "title": "Colorroute",
+            "type": "integer",
+            "nullable": true
+          },
+          "dayTypeSla": {
+            "title": "Daytypesla",
+            "type": "integer",
+            "nullable": true
+          },
+          "maxDaysSla": {
+            "title": "Maxdayssla",
+            "type": "integer",
+            "nullable": true
+          },
+          "maxDocDaysSla": {
+            "title": "Maxdocdayssla",
+            "type": "integer",
+            "nullable": true
+          },
+          "calendarDaysFlag": {
+            "title": "Calendardaysflag",
+            "type": "integer",
+            "nullable": true
+          },
+          "fullKitDate": {
+            "title": "Fullkitdate",
+            "type": "string",
+            "nullable": true
+          },
+          "processPolicies": {
+            "title": "Processpolicies",
+            "type": "integer",
+            "nullable": true
+          },
+          "closingCode": {
+            "title": "Closingcode",
+            "type": "integer",
+            "nullable": true
+          },
+          "closingDescription": {
+            "title": "Closingdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "closingDate": {
+            "title": "Closingdate",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocuments": {
+            "items": {
+              "$ref": "#/components/schemas/ClaimReceivedDocument"
+            },
+            "type": "array",
+            "title": "Receiveddocuments",
+            "default": []
+          },
+          "letters": {
+            "items": {
+              "$ref": "#/components/schemas/ClaimLetter"
+            },
+            "type": "array",
+            "title": "Letters",
+            "default": []
+          },
+          "services": {
+            "items": {
+              "$ref": "#/components/schemas/ClaimService"
+            },
+            "type": "array",
+            "title": "Services",
+            "default": []
+          },
+          "payments": {
+            "items": {
+              "$ref": "#/components/schemas/ClaimPayment"
+            },
+            "type": "array",
+            "title": "Payments",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "ClaimData"
+      },
+      "ClaimLetter": {
+        "properties": {
+          "docName": {
+            "title": "Docname",
+            "type": "string",
+            "nullable": true
+          },
+          "docType": {
+            "title": "Doctype",
+            "type": "integer",
+            "nullable": true
+          },
+          "sentDate": {
+            "title": "Sentdate",
+            "type": "string",
+            "nullable": true
+          },
+          "docID": {
+            "title": "Docid",
+            "type": "string",
+            "nullable": true
+          },
+          "docStatus": {
+            "title": "Docstatus",
+            "type": "integer",
+            "nullable": true
+          },
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ClaimLetter"
+      },
+      "ClaimPayment": {
+        "properties": {
+          "paymentNum": {
+            "title": "Paymentnum",
+            "type": "integer",
+            "nullable": true
+          },
+          "obligationID": {
+            "title": "Obligationid",
+            "type": "integer",
+            "nullable": true
+          },
+          "payeeType": {
+            "title": "Payeetype",
+            "type": "string",
+            "nullable": true
+          },
+          "creditDebitCode": {
+            "title": "Creditdebitcode",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentStatus": {
+            "title": "Paymentstatus",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "title": "Paymentmethod",
+            "type": "integer",
+            "nullable": true
+          },
+          "paymentMethodDesc": {
+            "title": "Paymentmethoddesc",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentDetails": {
+            "title": "Paymentdetails",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAmount": {
+            "title": "Paymentamount",
+            "type": "number",
+            "nullable": true
+          },
+          "paymentOpenDate": {
+            "title": "Paymentopendate",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentApprovalDate": {
+            "title": "Paymentapprovaldate",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentExecutionDate": {
+            "title": "Paymentexecutiondate",
+            "type": "string",
+            "nullable": true
+          },
+          "paymentLines": {
+            "items": {
+              "$ref": "#/components/schemas/PaymentLine"
+            },
+            "type": "array",
+            "title": "Paymentlines",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "ClaimPayment"
+      },
+      "ClaimProcess": {
+        "properties": {
+          "personId": {
+            "type": "string",
+            "title": "Personid"
+          },
+          "sourceSystem": {
+            "title": "Sourcesystem"
+          },
+          "trackersData": {
+            "$ref": "#/components/schemas/ClaimTrackersData"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "personId",
+          "sourceSystem",
+          "trackersData"
+        ],
+        "title": "ClaimProcess"
+      },
+      "ClaimReceivedDocument": {
+        "properties": {
+          "docType": {
+            "title": "Doctype",
+            "type": "integer",
+            "nullable": true
+          },
+          "docName": {
+            "title": "Docname",
+            "type": "string",
+            "nullable": true
+          },
+          "docID": {
+            "title": "Docid",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDate": {
+            "title": "Receiveddate",
+            "type": "string",
+            "nullable": true
+          },
+          "docStatus": {
+            "title": "Docstatus",
+            "type": "integer",
+            "nullable": true
+          },
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "mandatoryDocInd": {
+            "title": "Mandatorydocind",
+            "type": "string",
+            "nullable": true
+          },
+          "docApproved": {
+            "title": "Docapproved",
+            "type": "integer",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ClaimReceivedDocument"
+      },
+      "ClaimService": {
+        "properties": {
+          "serviceSequence": {
+            "title": "Servicesequence",
+            "type": "integer",
+            "nullable": true
+          },
+          "servicecode": {
+            "title": "Servicecode",
+            "type": "integer",
+            "nullable": true
+          },
+          "servicedescription": {
+            "title": "Servicedescription",
+            "type": "string",
+            "nullable": true
+          },
+          "treatmentDate": {
+            "title": "Treatmentdate",
+            "type": "string",
+            "nullable": true
+          },
+          "treatmentPrice": {
+            "title": "Treatmentprice",
+            "type": "number",
+            "nullable": true
+          },
+          "numberOfTreatments": {
+            "title": "Numberoftreatments",
+            "type": "integer",
+            "nullable": true
+          },
+          "statusCode": {
+            "title": "Statuscode",
+            "type": "integer",
+            "nullable": true
+          },
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ClaimService"
+      },
+      "ClaimTrackersData": {
+        "properties": {
+          "claimData": {
+            "$ref": "#/components/schemas/ClaimData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "claimData"
+        ],
+        "title": "ClaimTrackersData"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ErrorResponse"
+      },
+      "EventRecord": {
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "title": "Eventid"
+          },
+          "eventType": {
+            "type": "string",
+            "title": "Eventtype"
+          },
+          "correlationId": {
+            "type": "string",
+            "title": "Correlationid"
+          },
+          "sourceSystem": {
+            "type": "string",
+            "title": "Sourcesystem"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp"
+          },
+          "statusCode": {
+            "type": "integer",
+            "title": "Statuscode"
+          },
+          "statusDescription": {
+            "type": "string",
+            "title": "Statusdescription"
+          },
+          "statusDate": {
+            "type": "string",
+            "title": "Statusdate"
+          },
+          "resultCode": {
+            "type": "integer",
+            "title": "Resultcode"
+          },
+          "resultDesc": {
+            "type": "string",
+            "title": "Resultdesc"
+          },
+          "failed": {
+            "type": "boolean",
+            "title": "Failed"
+          },
+          "receivedDocuments": {
+            "title": "Receiveddocuments",
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/src__models__retierment__ReceivedDocument"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "sentDocuments": {
+            "title": "Sentdocuments",
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/src__models__retierment__SentDocument"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "digitalStatusCode": {
+            "title": "Digitalstatuscode",
+            "type": "string",
+            "nullable": true
+          },
+          "digitalStatusDesc": {
+            "title": "Digitalstatusdesc",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "eventId",
+          "eventType",
+          "correlationId",
+          "sourceSystem",
+          "timestamp",
+          "statusCode",
+          "statusDescription",
+          "statusDate",
+          "resultCode",
+          "resultDesc",
+          "failed"
+        ],
+        "title": "EventRecord",
+        "description": "Event within process"
+      },
+      "GetInsureeIdsRequest": {
+        "properties": {
+
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "maxProperties": 0,
+        "minProperties": 0,
+        "title": "GetInsureeIdsRequest",
+        "description": "Request model for getting all insuree IDs"
+      },
+      "GetInsureeRequest": {
+        "properties": {
+          "insuredId": {
+            "type": "string",
+            "title": "Insuredid",
+            "description": "Insuree ID to fetch"
+          },
+          "startDate": {
+            "title": "Startdate",
+            "description": "Start date in YYYY-MM-DD",
+            "type": "string",
+            "nullable": true
+          },
+          "endDate": {
+            "title": "Enddate",
+            "description": "End date in YYYY-MM-DD",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "insuredId"
+        ],
+        "title": "GetInsureeRequest",
+        "description": "Request model for getting insuree data"
+      },
+      "GetProcessByIdRequest": {
+        "properties": {
+          "processId": {
+            "type": "string",
+            "title": "Processid",
+            "description": "Process ID to fetch"
+          }
+        },
+        "type": "object",
+        "required": [
+          "processId"
+        ],
+        "title": "GetProcessByIdRequest",
+        "description": "Request model for getting process by ID"
+      },
+      "ImmediateRetirementData": {
+        "properties": {
+          "immediateRetirementProcessId": {
+            "title": "Immediateretirementprocessid",
+            "type": "string",
+            "nullable": true
+          },
+          "submissionDate": {
+            "title": "Submissiondate",
+            "type": "string",
+            "nullable": true
+          },
+          "insuredName": {
+            "title": "Insuredname",
+            "type": "string",
+            "nullable": true
+          },
+          "personId": {
+            "title": "Personid",
+            "type": "string",
+            "nullable": true
+          },
+          "operationalProcess": {
+            "items": {
+              "$ref": "#/components/schemas/OperationalProcessItem"
+            },
+            "type": "array",
+            "title": "Operationalprocess",
+            "default": []
+          },
+          "totalTransferAmount": {
+            "title": "Totaltransferamount",
+            "type": "string",
+            "nullable": true
+          },
+          "totalDeposits": {
+            "title": "Totaldeposits",
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "title": "Statuscode",
+            "type": "string",
+            "nullable": true
+          },
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ImmediateRetirementData"
+      },
+      "ImmediateRetirementProcess": {
+        "properties": {
+          "personId": {
+            "type": "string",
+            "title": "Personid"
+          },
+          "sourceSystem": {
+            "title": "Sourcesystem"
+          },
+          "trackersData": {
+            "$ref": "#/components/schemas/ImmediateRetirementTrackersData"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "personId",
+          "sourceSystem",
+          "trackersData"
+        ],
+        "title": "ImmediateRetirementProcess"
+      },
+      "ImmediateRetirementTrackersData": {
+        "properties": {
+          "immediateRetirementData": {
+            "$ref": "#/components/schemas/ImmediateRetirementData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "immediateRetirementData"
+        ],
+        "title": "ImmediateRetirementTrackersData"
+      },
+      "InsuredIdsResponse": {
+        "properties": {
+          "insuredIds": {
+            "title": "Insuredids",
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "ErrorCode": {
+            "type": "integer",
+            "title": "Errorcode",
+            "default": 0
+          },
+          "ErrorMessage": {
+            "title": "Errormessage",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "InsuredIdsResponse"
+      },
+      "InsuredStatusesResponse": {
+        "properties": {
+          "processes": {
+            "title": "Processes",
+            "items": {
+              "$ref": "#/components/schemas/ProcessRecordNew"
+            },
+            "type": "array",
+            "nullable": true
+          },
+          "ErrorCode": {
+            "type": "integer",
+            "title": "Errorcode",
+            "default": 0
+          },
+          "ErrorMessage": {
+            "title": "Errormessage",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "InsuredStatusesResponse"
+      },
+      "Metadata": {
+        "properties": {
+          "messageId": {
+            "title": "Messageid",
+            "type": "string",
+            "nullable": true
+          },
+          "eventType": {
+            "title": "Eventtype",
+            "type": "string",
+            "nullable": true
+          },
+          "sourceSystem": {
+            "title": "Sourcesystem",
+            "type": "string",
+            "nullable": true
+          },
+          "queueArn": {
+            "title": "Queuearn",
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "title": "Region",
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "title": "Createdat",
+            "type": "string",
+            "nullable": true
+          },
+          "lastEventDate": {
+            "title": "Lasteventdate",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "Metadata",
+        "description": "Process metadata"
+      },
+      "NiudData": {
+        "properties": {
+          "event": {
+            "$ref": "#/components/schemas/NiudEvent"
+          }
+        },
+        "type": "object",
+        "required": [
+          "event"
+        ],
+        "title": "NiudData"
+      },
+      "NiudEvent": {
+        "properties": {
+          "operationalProcessId": {
+            "title": "Operationalprocessid",
+            "type": "string",
+            "nullable": true
+          },
+          "eventTypeDescription": {
+            "title": "Eventtypedescription",
+            "type": "string",
+            "nullable": true
+          },
+          "eventTypeCode": {
+            "title": "Eventtypecode",
+            "type": "string",
+            "nullable": true
+          },
+          "statusDate": {
+            "title": "Statusdate",
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "title": "Statuscode",
+            "type": "string",
+            "nullable": true
+          },
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "insuredName": {
+            "title": "Insuredname",
+            "type": "string",
+            "nullable": true
+          },
+          "personId": {
+            "title": "Personid",
+            "type": "string",
+            "nullable": true
+          },
+          "policyNumber": {
+            "title": "Policynumber",
+            "type": "string",
+            "nullable": true
+          },
+          "productTypeDescription": {
+            "title": "Producttypedescription",
+            "type": "string",
+            "nullable": true
+          },
+          "productTypeCode": {
+            "title": "Producttypecode",
+            "type": "string",
+            "nullable": true
+          },
+          "subProductTypeCode": {
+            "title": "Subproducttypecode",
+            "type": "string",
+            "nullable": true
+          },
+          "subProductTypeDescription": {
+            "title": "Subproducttypedescription",
+            "type": "string",
+            "nullable": true
+          },
+          "requestSourceCode": {
+            "title": "Requestsourcecode",
+            "type": "string",
+            "nullable": true
+          },
+          "requestSourceDesc": {
+            "title": "Requestsourcedesc",
+            "type": "string",
+            "nullable": true
+          },
+          "companyCode": {
+            "title": "Companycode",
+            "type": "string",
+            "nullable": true
+          },
+          "rejectionReason": {
+            "title": "Rejectionreason",
+            "type": "string",
+            "nullable": true
+          },
+          "memberStatusCode": {
+            "title": "Memberstatuscode",
+            "type": "string",
+            "nullable": true
+          },
+          "memberStatusDescription": {
+            "title": "Memberstatusdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "transferringFundCode": {
+            "title": "Transferringfundcode",
+            "type": "string",
+            "nullable": true
+          },
+          "transferringFundName": {
+            "title": "Transferringfundname",
+            "type": "string",
+            "nullable": true
+          },
+          "submissionDate": {
+            "title": "Submissiondate",
+            "type": "string",
+            "nullable": true
+          },
+          "insuredSignatureDate": {
+            "title": "Insuredsignaturedate",
+            "type": "string",
+            "nullable": true
+          },
+          "guardianSignatureDate": {
+            "title": "Guardiansignaturedate",
+            "type": "string",
+            "nullable": true
+          },
+          "insuredSignatureValidity": {
+            "title": "Insuredsignaturevalidity",
+            "type": "string",
+            "nullable": true
+          },
+          "expectedTransferAmount": {
+            "title": "Expectedtransferamount",
+            "type": "string",
+            "nullable": true
+          },
+          "actualTransferAmount": {
+            "title": "Actualtransferamount",
+            "type": "string",
+            "nullable": true
+          },
+          "transferringAccountNumber": {
+            "title": "Transferringaccountnumber",
+            "type": "string",
+            "nullable": true
+          },
+          "expectedTransferDate": {
+            "title": "Expectedtransferdate",
+            "type": "string",
+            "nullable": true
+          },
+          "actualTransferDate": {
+            "title": "Actualtransferdate",
+            "type": "string",
+            "nullable": true
+          },
+          "agentNumber": {
+            "title": "Agentnumber",
+            "type": "string",
+            "nullable": true
+          },
+          "agentName": {
+            "title": "Agentname",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocuments": {
+            "items": {
+              "$ref": "#/components/schemas/src__models__shared__documents__ReceivedDocument"
+            },
+            "type": "array",
+            "title": "Receiveddocuments",
+            "default": []
+          },
+          "sentDocuments": {
+            "items": {
+              "$ref": "#/components/schemas/src__models__shared__documents__SentDocument"
+            },
+            "type": "array",
+            "title": "Sentdocuments",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "NiudEvent"
+      },
+      "NiudProcess": {
+        "properties": {
+          "personId": {
+            "type": "string",
+            "title": "Personid"
+          },
+          "sourceSystem": {
+            "title": "Sourcesystem"
+          },
+          "trackersData": {
+            "$ref": "#/components/schemas/NiudTrackersData"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "personId",
+          "sourceSystem",
+          "trackersData"
+        ],
+        "title": "NiudProcess"
+      },
+      "NiudTrackersData": {
+        "properties": {
+          "niudData": {
+            "$ref": "#/components/schemas/NiudData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "niudData"
+        ],
+        "title": "NiudTrackersData"
+      },
+      "OperationalProcessItem": {
+        "properties": {
+          "operationalProcessId": {
+            "title": "Operationalprocessid",
+            "type": "string",
+            "nullable": true
+          },
+          "eventCode": {
+            "title": "Eventcode",
+            "type": "string",
+            "nullable": true
+          },
+          "eventDescription": {
+            "title": "Eventdescription",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "OperationalProcessItem"
+      },
+      "PaymentLine": {
+        "properties": {
+          "eventCode": {
+            "title": "Eventcode",
+            "type": "string",
+            "nullable": true
+          },
+          "treatmentCode": {
+            "title": "Treatmentcode",
+            "type": "integer",
+            "nullable": true
+          },
+          "treatmentSequence": {
+            "title": "Treatmentsequence",
+            "type": "integer",
+            "nullable": true
+          },
+          "treatmentQuantity": {
+            "title": "Treatmentquantity",
+            "type": "integer",
+            "nullable": true
+          },
+          "treatmentAmount": {
+            "title": "Treatmentamount",
+            "type": "number",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "PaymentLine"
+      },
+      "PolicyEvent": {
+        "properties": {
+          "statusDescription": {
+            "title": "Statusdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "statusDate": {
+            "title": "Statusdate",
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "title": "Statuscode",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocuments": {
+            "items": {
+              "$ref": "#/components/schemas/src__models__shared__documents__ReceivedDocument"
+            },
+            "type": "array",
+            "title": "Receiveddocuments",
+            "default": []
+          },
+          "sentDocuments": {
+            "items": {
+              "$ref": "#/components/schemas/src__models__shared__documents__SentDocument"
+            },
+            "type": "array",
+            "title": "Sentdocuments",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "PolicyEvent"
+      },
+      "PolicyIssuanceData": {
+        "properties": {
+          "processId": {
+            "title": "Processid",
+            "type": "string",
+            "nullable": true
+          },
+          "companyCode": {
+            "title": "Companycode",
+            "type": "string",
+            "nullable": true
+          },
+          "requestInitiationMethod": {
+            "title": "Requestinitiationmethod",
+            "type": "string",
+            "nullable": true
+          },
+          "agentNumber": {
+            "title": "Agentnumber",
+            "type": "string",
+            "nullable": true
+          },
+          "agentName": {
+            "title": "Agentname",
+            "type": "string",
+            "nullable": true
+          },
+          "policies": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Policies",
+            "default": []
+          },
+          "rejectionReason": {
+            "title": "Rejectionreason",
+            "type": "string",
+            "nullable": true
+          },
+          "closureCode": {
+            "title": "Closurecode",
+            "type": "string",
+            "nullable": true
+          },
+          "closureReason": {
+            "title": "Closurereason",
+            "type": "string",
+            "nullable": true
+          },
+          "maxDaysSla": {
+            "title": "Maxdayssla",
+            "type": "string",
+            "nullable": true
+          },
+          "maxDocDaysSla": {
+            "title": "Maxdocdayssla",
+            "type": "string",
+            "nullable": true
+          },
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/PolicyEvent"
+            },
+            "type": "array",
+            "title": "Events",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "PolicyIssuanceData"
+      },
+      "PolicyIssuanceProcess": {
+        "properties": {
+          "personId": {
+            "type": "string",
+            "title": "Personid"
+          },
+          "sourceSystem": {
+            "title": "Sourcesystem"
+          },
+          "trackersData": {
+            "$ref": "#/components/schemas/PolicyIssuanceTrackersData"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "personId",
+          "sourceSystem",
+          "trackersData"
+        ],
+        "title": "PolicyIssuanceProcess"
+      },
+      "PolicyIssuanceTrackersData": {
+        "properties": {
+          "policyIssuanceData": {
+            "$ref": "#/components/schemas/PolicyIssuanceData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policyIssuanceData"
+        ],
+        "title": "PolicyIssuanceTrackersData"
+      },
+      "ProcessByIdResponse": {
+        "properties": {
+          "process": {
+            "$ref": "#/components/schemas/ProcessRecordNew",
+            "nullable": true
+          },
+          "ErrorCode": {
+            "type": "integer",
+            "title": "Errorcode",
+            "default": 0
+          },
+          "ErrorMessage": {
+            "title": "Errormessage",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ProcessByIdResponse"
+      },
+      "ProcessRecordNew": {
+        "properties": {
+          "processId": {
+            "type": "string",
+            "title": "Processid"
+          },
+          "personId": {
+            "type": "string",
+            "title": "Personid"
+          },
+          "companyCode": {
+            "type": "integer",
+            "title": "Companycode"
+          },
+          "processType": {
+            "type": "integer",
+            "title": "Processtype"
+          },
+          "processName": {
+            "type": "string",
+            "title": "Processname"
+          },
+          "statusCode": {
+            "type": "integer",
+            "title": "Statuscode"
+          },
+          "statusDescription": {
+            "type": "string",
+            "title": "Statusdescription"
+          },
+          "statusDate": {
+            "type": "string",
+            "title": "Statusdate"
+          },
+          "dayTypeSla": {
+            "type": "integer",
+            "title": "Daytypesla"
+          },
+          "maxDaysSla": {
+            "title": "Maxdayssla",
+            "type": "integer",
+            "nullable": true
+          },
+          "maxDocDaysSla": {
+            "title": "Maxdocdayssla",
+            "type": "integer",
+            "nullable": true
+          },
+          "fullKitDate": {
+            "title": "Fullkitdate",
+            "type": "string",
+            "nullable": true
+          },
+          "policyNumberList": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Policynumberlist"
+          },
+          "closingCode": {
+            "title": "Closingcode",
+            "type": "integer",
+            "nullable": true
+          },
+          "closingDescription": {
+            "title": "Closingdescription",
+            "type": "string",
+            "nullable": true
+          },
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/EventRecord"
+            },
+            "type": "array",
+            "title": "Events"
+          },
+          "additionalData": {
+            "$ref": "#/components/schemas/AdditionalData"
+          },
+          "resultCode": {
+            "type": "integer",
+            "title": "Resultcode"
+          },
+          "resultDesc": {
+            "type": "string",
+            "title": "Resultdesc"
+          },
+          "_metadata": {
+            "$ref": "#/components/schemas/Metadata",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "processId",
+          "personId",
+          "companyCode",
+          "processType",
+          "processName",
+          "statusCode",
+          "statusDescription",
+          "statusDate",
+          "dayTypeSla",
+          "maxDaysSla",
+          "maxDocDaysSla",
+          "fullKitDate",
+          "policyNumberList",
+          "closingCode",
+          "closingDescription",
+          "events",
+          "additionalData",
+          "resultCode",
+          "resultDesc"
+        ],
+        "title": "ProcessRecordNew",
+        "description": "NEW DocumentDB schema - documents ONLY in events"
+      },
+      "SendMessageResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "messageId": {
+            "title": "Messageid",
+            "type": "string",
+            "nullable": true
+          },
+          "ErrorCode": {
+            "type": "integer",
+            "title": "Errorcode",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "SendMessageResponse"
+      },
+      "ValidationErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationFieldsErrors"
+            },
+            "type": "array",
+            "title": "Errors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "errors"
+        ],
+        "title": "ValidationErrorResponse"
+      },
+      "ValidationFieldsErrors": {
+        "properties": {
+          "loc": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Loc"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "message",
+          "type"
+        ],
+        "title": "ValidationFieldsErrors"
+      },
+      "src__models__retierment__ReceivedDocument": {
+        "properties": {
+          "docName": {
+            "type": "string",
+            "title": "Docname"
+          },
+          "docType": {
+            "type": "integer",
+            "title": "Doctype"
+          },
+          "receivedDate": {
+            "title": "Receiveddate",
+            "type": "string",
+            "nullable": true
+          },
+          "docStatus": {
+            "type": "integer",
+            "title": "Docstatus"
+          },
+          "statusDescription": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Statusdescription"
+          },
+          "docId": {
+            "title": "Docid",
+            "type": "string",
+            "nullable": true
+          },
+          "docApproved": {
+            "title": "Docapproved",
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "docName",
+          "docType",
+          "receivedDate",
+          "docStatus",
+          "statusDescription",
+          "docId"
+        ],
+        "title": "ReceivedDocument",
+        "description": "Received document"
+      },
+      "src__models__retierment__SentDocument": {
+        "properties": {
+          "docName": {
+            "type": "string",
+            "title": "Docname"
+          },
+          "docType": {
+            "type": "integer",
+            "title": "Doctype"
+          },
+          "docStatus": {
+            "type": "string",
+            "title": "Docstatus"
+          },
+          "sentDate": {
+            "title": "Sentdate",
+            "type": "string",
+            "nullable": true
+          },
+          "docId": {
+            "title": "Docid",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "docName",
+          "docType",
+          "docStatus"
+        ],
+        "title": "SentDocument",
+        "description": "Sent document"
+      },
+      "src__models__shared__documents__ReceivedDocument": {
+        "properties": {
+          "receivedDocumentDate": {
+            "title": "Receiveddocumentdate",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocumentStatus": {
+            "title": "Receiveddocumentstatus",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocumentArchiveId": {
+            "title": "Receiveddocumentarchiveid",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocumentTypeName": {
+            "title": "Receiveddocumenttypename",
+            "type": "string",
+            "nullable": true
+          },
+          "receivedDocumentFilingCode": {
+            "title": "Receiveddocumentfilingcode",
+            "type": "string",
+            "nullable": true
+          },
+          "recipientType": {
+            "title": "Recipienttype",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "ReceivedDocument"
+      },
+      "src__models__shared__documents__SentDocument": {
+        "properties": {
+          "activityName": {
+            "title": "Activityname",
+            "type": "string",
+            "nullable": true
+          },
+          "unifiedDistributionId": {
+            "title": "Unifieddistributionid",
+            "type": "string",
+            "nullable": true
+          },
+          "externalProcessId": {
+            "title": "Externalprocessid",
+            "type": "string",
+            "nullable": true
+          },
+          "sentDocumentTypeName": {
+            "title": "Sentdocumenttypename",
+            "type": "string",
+            "nullable": true
+          },
+          "sentDocumentStatus": {
+            "title": "Sentdocumentstatus",
+            "type": "string",
+            "nullable": true
+          },
+          "sentDocumentDate": {
+            "title": "Sentdocumentdate",
+            "type": "string",
+            "nullable": true
+          },
+          "sentDocumentFilingCode": {
+            "title": "Sentdocumentfilingcode",
+            "type": "string",
+            "nullable": true
+          },
+          "recipientType": {
+            "title": "Recipienttype",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "type": "object",
+        "title": "SentDocument"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "ods-api",
+      "description": "Operational Data Store API"
+    }
+  ]
+}nn
