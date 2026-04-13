@@ -1,0 +1,986 @@
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-04-13 13:20:19.249
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2026-04-13 13:20:19.839 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/C:/dev/eclipseWorkspaces/Forqa/
+
+!ENTRY ch.qos.logback.classic 1 0 2026-04-13 13:20:24.970
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-04-13 13:20:51.157
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-04-13 13:20:51.782
+!MESSAGE Logback config file: C:\dev\eclipseWorkspaces\Forqa\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:20:53.069
+!MESSAGE Picked up custom CA cert.
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:20:53.124
+!MESSAGE Using proxy URL: http://127.0.0.1:8889 for endpoint: https://client-telemetry.us-east-1.amazonaws.com
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:20:59.343
+!MESSAGE Using proxy URL: http://127.0.0.1:8889 for endpoint: https://amazonaws.com
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:20:59.351
+!MESSAGE Picked up custom CA cert.
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:21:00.969
+!MESSAGE Validated and fetched latest manifest
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-04-13 13:21:03.195
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ukkepdo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.ibm.etools.rdz.client.certificates 1 0 2026-04-13 13:21:04.803
+!MESSAGE See if a security provider needs to be loaded: com.ibm.etools.rdz.client.certificates.plugin
+
+!ENTRY com.ibm.etools.rdz.client.certificates 1 0 2026-04-13 13:21:04.806
+!MESSAGE cryptoProviderClassName override value is: null in plugin: com.ibm.etools.rdz.client.certificates.plugin
+
+!ENTRY com.ibm.etools.rdz.client.certificates 1 0 2026-04-13 13:21:04.809
+!MESSAGE No security provider override has been specified: com.ibm.etools.rdz.client.certificates.plugin
+
+!ENTRY com.ibm.etools.rdz.client.certificates 1 0 2026-04-13 13:21:04.810
+!MESSAGE See if a the override rdzTLSVersion parameter has been specified: com.ibm.etools.rdz.client.certificates.plugin
+
+!ENTRY com.ibm.etools.rdz.client.certificates 1 0 2026-04-13 13:21:04.813
+!MESSAGE The override rdzTLSVersion parameter was not specified: com.ibm.etools.rdz.client.certificates.plugin
+
+!ENTRY org.eclipse.buildship.core 2 0 2026-04-13 13:21:05.432
+!MESSAGE Could not load Gradle version information
+!STACK 0
+org.gradle.api.UncheckedIOException: Cannot download published Gradle versions.
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.tryToDownloadAndCacheVersions(PublishedGradleVersions.java:151)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.create(PublishedGradleVersions.java:111)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersionsWrapper$LoadVersionsJob.run(PublishedGradleVersionsWrapper.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://services.gradle.org/versions/all
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2013)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:223)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:164)
+	... 4 more
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:21:05.769
+!MESSAGE Launching Amazon Q language server v1.64.0 from local cache C:\dev\eclipseWorkspaces\Forqa\.metadata\.plugins\amazon-q-eclipse\lsp\AmazonQAgentic\1.64.0 (Attribution notice for aws-lsp-codewhisperer.js can be found at: https://aws-language-servers.us-east-1.amazonaws.com/d45ad0cb-2c46-40dd-a7d4-355cf3791465/THIRD_PARTY_LICENSES)
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:21:08.089
+!MESSAGE Using proxy URL: http://127.0.0.1:8889 for endpoint: https://amazonaws.com
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:21:08.095
+!MESSAGE Injecting IDE trusted certificates from C:\Users\ukkepdo\AppData\Local\Temp\eclipse-q-extra-ca14919260314569846417.pem into NODE_EXTRA_CA_CERTS
+
+!ENTRY amazon-q-eclipse 1 0 2026-04-13 13:21:08.126
+!MESSAGE Initializing communication with Amazon Q Lsp Server
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.492
+!MESSAGE [Info]	Runtime: Initializing runtime with encryption
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.494
+!MESSAGE [Info]	Runtime: Registering IAM credentials update handler
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.496
+!MESSAGE [Info]	Runtime: Registering bearer credentials update handler
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.498
+!MESSAGE [Log]	[2026-04-13T10:21:09.446Z] lserver: SecurityScan server has been initialized
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.500
+!MESSAGE [Log]	[2026-04-13T10:21:09.439Z] lserver: Amazon Q Inline Suggestion server has been initialised
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.502
+!MESSAGE [Log]	[2026-04-13T10:21:09.447Z] lserver: Q Chat server has been initialized
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.504
+!MESSAGE [Log]	[2026-04-13T10:21:09.446Z] lserver: Amazon Q Configuration server has been initialised
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.505
+!MESSAGE [Info]	[2026-04-13T10:21:09.483Z] lserver: QCodeAnalysisServer
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.507
+!MESSAGE [Log]	[2026-04-13T10:21:09.447Z] lserver: Creating identity server.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.509
+!MESSAGE [Log]	[2026-04-13T10:21:09.486Z] lserver: Amazon Q Service server has been initialised
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.510
+!MESSAGE [Log]	[2026-04-13T10:21:09.485Z] lserver: Workspace context server has been initialized
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.512
+!MESSAGE [Info]	[2026-04-13T10:21:09.491Z] lserver: Logging level changed to log
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.514
+!MESSAGE [Log]	[2026-04-13T10:21:09.486Z] lserver: Amazon Q Service server has been initialised
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.515
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: Region not provided by caller or runtime, falling back to default region (us-east-1) and endpoint
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:09.517
+!MESSAGE [Warning]	[2026-04-13T10:21:09.492Z] lserver: Server context is currently not supported in AmazonQ For Eclipse
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.519
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: Enabled Q Developer Profile support: true
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.521
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: Reading enableDeveloperProfileSupport setting from AWSInitializationOptions
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.523
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: TransformConfigurationServer: Constructor called - server created
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.525
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: Manager instance is initialize
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.526
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: TransformConfigurationServer: Features keys: credentialsProvider, lsp, workspace, logging, runtime, sdkInitializator
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.528
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: TransformConfigurationServer: Features runtime available: true
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.530
+!MESSAGE [Info]	Runtime: Initializing server "AWS CodeWhisperer" version "1.64.0" with capabilities:
+{"executeCommandProvider":{"commands":["aws/atxTransform/listOrCreateWorkspace","aws/atxTransform/startTransform","aws/atxTransform/getTransformInfo","aws/atxTransform/uploadPlan","aws/atxTransform/stopJob","aws/atxTransform/uploadPackages","aws/chat/manageSubscription","aws/qNetTransform/startTransform","aws/qNetTransform/getTransform","aws/qNetTransform/pollTransform","aws/qNetTransform/pollTransformForPlan","aws/qNetTransform/getTransformPlan","aws/qNetTransform/cancelTransform","aws/qNetTransform/downloadArtifacts","aws/qNetTransform/cancelPolling","aws/codewhisperer/runSecurityScan","aws/codewhisperer/cancelSecurityScan"]},"textDocumentSync":{"openClose":true,"change":2,"save":{"includeText":true}},"workspace":{"workspaceFolders":{"supported":true,"changeNotifications":true},"fileOperations":{"didCreate":{"filters":[{"pattern":{"glob":"{**/*.abap,**/*.c,**/*.cpp,**/*.cs,**/*.dart,**/*.h,**/*.hcl,**/*.cc,**/*.hpp,**/*.go,**/*.java,**/*.js,**/*.json,**/*.jsonc,**/*.jsx,**/*.kt,**/*.kts,**/*.lua,**/*.wlua,**/*.php,**/*.ps1,**/*.psm1,**/*.py,**/*.r,**/*.rb,**/*.rs,**/*.sc,**/*.scala,**/*.sh,**/*.sql,**/*.sv,**/*.svh,**/*.swift,**/*.tf,**/*.ts,**/*.tsx,**/*.vh,**/*.vue,**/*.yaml,**/*.yml}","matches":"file"}}]},"didRename":{"filters":[{"pattern":{"glob":"{**/*.abap,**/*.c,**/*.cpp,**/*.cs,**/*.dart,**/*.h,**/*.hcl,**/*.cc,**/*.hpp,**/*.go,**/*.java,**/*.js,**/*.json,**/*.jsonc,**/*.jsx,**/*.kt,**/*.kts,**/*.lua,**/*.wlua,**/*.php,**/*.ps1,**/*.psm1,**/*.py,**/*.r,**/*.rb,**/*.rs,**/*.sc,**/*.scala,**/*.sh,**/*.sql,**/*.sv,**/*.svh,**/*.swift,**/*.tf,**/*.ts,**/*.tsx,**/*.vh,**/*.vue,**/*.yaml,**/*.yml}","matches":"file"}}]},"didDelete":{"filters":[{"pattern":{"glob":"{**/*.abap,**/*.c,**/*.cpp,**/*.cs,**/*.dart,**/*.h,**/*.hcl,**/*.cc,**/*.hpp,**/*.go,**/*.java,**/*.js,**/*.json,**/*.jsonc,**/*.jsx,**/*.kt,**/*.kts,**/*.lua,**/*.wlua,**/*.php,**/*.ps1,**/*.psm1,**/*.py,**/*.r,**/*.rb,**/*.rs,**/*.sc,**/*.scala,**/*.sh,**/*.sql,**/*.sv,**/*.svh,**/*.swift,**/*.tf,**/*.ts,**/*.tsx,**/*.vh,**/*.vue,**/*.yaml,**/*.yml}","matches":"file"}}]}}},"configurationProvider":{"sections":["aws.transformProfiles","aws.atx.transformProfiles","aws.q","aws.q.customizations","aws.q.developerProfiles"]},"chatOptions":{"quickActions":{"quickActionsCommandGroups":[{"commands":[{"command":"/help","description":"Learn more about Amazon Q","icon":"help"},{"command":"/clear","description":"Clear this session","icon":"trash"},{"command":"/compact","description":"Compact this conversation","icon":"folder"}]}]},"mcpServers":true,"modelSelection":true,"history":true,"export":true,"shortcut":false,"showLogs":false,"reroute":false,"codeReviewInChat":false}}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.532
+!MESSAGE [Log]	[2026-04-13T10:21:09.493Z] lserver: TransformConfigurationServer: Initialize called
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:09.534
+!MESSAGE [Info]	[2026-04-13T10:21:09.496Z] lserver: Initialized Runtimes OperationalTelemetry with optOut=true
+
+!ENTRY amazon-q-eclipse 4 0 2026-04-13 13:21:09.875
+!MESSAGE Error fetching artifact from remote location.
+!STACK 0
+software.aws.toolkits.eclipse.amazonq.exception.AmazonQPluginException: HTTP request failed with response code: 403
+	at software.aws.toolkits.eclipse.amazonq.util.UpdateUtils.fetchRemoteArtifactVersion(UpdateUtils.java:82)
+	at software.aws.toolkits.eclipse.amazonq.util.UpdateUtils.newUpdateAvailable(UpdateUtils.java:49)
+	at software.aws.toolkits.eclipse.amazonq.util.UpdateUtils.checkForUpdate(UpdateUtils.java:63)
+	at software.aws.toolkits.eclipse.amazonq.lsp.LspStartupActivity$2.lambda$0(LspStartupActivity.java:93)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.318
+!MESSAGE [Log]	[2026-04-13T10:21:09.525Z] lserver: Client initialization params: {"processId":15396,"rootUri":null,"initializationOptions":{"aws":{"clientInfo":{"extension":{"name":"AmazonQ For Eclipse","version":"2.6.2.202512122103"},"clientId":"0e9d7696-8dc0-47fb-99f2-114bb5a4d661","name":"Eclipse IDE","version":"4.38.0.20251204-0849"},"awsClientCapabilities":{"q":{"developerProfiles":true,"pinnedContextEnabled":true,"customizationsWithMetadata":true,"modelSelection":true,"mcp":true},"window":{"showSaveFileDialog":true}}}},"capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","delete","rename"],"failureHandling":"undo","changeAnnotationSupport":{"groupsOnLabel":true}},"didChangeWatchedFiles":{"relativePatternSupport":true,"dynamicRegistration":true},"symbol":{"dynamicRegistration":true},"executeCommand":{"dynamicRegistration":true},"workspaceFolders":true,"configuration":true,"codeLens":{"refreshSupport":true},"fileOperations":{"willCreate":true,"willRename":true,"willDelete":true}},"textDocument":{"synchronization":{"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"completionItem":{"snippetSupport":true,"documentationFormat":["markdown","plaintext"],"resolveSupport":{"properties":["documentation","detail","additionalTextEdits"]},"insertTextModeSupport":{"valueSet":[1,2]}},"contextSupport":true,"insertTextMode":2,"completionList":{"itemDefaults":["commitCharacters","editRange","insertTextFormat","insertTextMode"]},"dynamicRegistration":true},"hover":{"contentFormat":["markdown","plaintext"]},"signatureHelp":{},"references":{},"documentHighlight":{},"documentSymbol":{"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{},"onTypeFormatting":{"dynamicRegistration":true},"definition":{"linkSupport":true},"typeDefinition":{"linkSupport":true},"codeAction":{"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}},"dataSupport":true,"resolveSupport":{"properties":["edit"]},"dynamicRegistration":true},"codeLens":{},"documentLink":{},"colorProvider":{},"rename":{"prepareSupport":true},"publishDiagnostics":{},"foldingRange":{"lineFoldingOnly":true,"foldingRangeKind":{"valueSet":["comment","imports","region"]},"foldingRange":{"collapsedText":false}},"callHierarchy":{},"selectionRange":{},"inlayHint":{}},"window":{"workDoneProgress":true,"showMessage":{},"showDocument":{"support":true}}},"clientInfo":{"name":"AmazonQ For Eclipse","version":"2.6.2.202512122103"},"trace":"off","workspaceFolders":[{"uri":"file:///C:/dev/eclipseWorkspaces/Forqa/RemoteSystemsTempFiles/","name":"RemoteSystemsTempFiles"}]}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.322
+!MESSAGE [Info]	[2026-04-13T10:21:09.530Z] lserver: In IAM Auth mode: false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.325
+!MESSAGE [Info]	[2026-04-13T10:21:09.539Z] lserver: Watching 4 MCP config paths with chokidar
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.327
+!MESSAGE [Log]	[2026-04-13T10:21:09.539Z] lserver: Chat configuration updated customizationArn to undefined
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.330
+!MESSAGE [Log]	[2026-04-13T10:21:09.525Z] lserver: [SERVER] Initialized telemetry-dependent components: CodePercentageTracker, CodeDiffTracker, periodicLogging=false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.333
+!MESSAGE [Log]	[2026-04-13T10:21:09.539Z] lserver: Chat configuration telemetry preference to OPTIN
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.336
+!MESSAGE [Log]	[2026-04-13T10:21:09.534Z] lserver: Initializing database at C:\Users\ukkepdo\.aws\amazonq\history\chat-history-596e672f0c1edfa9392d221dd054ea70.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.338
+!MESSAGE [Log]	[2026-04-13T10:21:09.540Z] lserver: Updating configuration of local context server
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:10.340
+!MESSAGE [Warning]	[2026-04-13T10:21:09.540Z] lserver: Agentic Review is currently not supported
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.342
+!MESSAGE [Info]	[2026-04-13T10:21:09.540Z] lserver: Vector library initializing with GPU acceleration: false, index worker thread count: -1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:10.344
+!MESSAGE [Log]	[2026-04-13T10:21:09.540Z] lserver: Setting project context indexing enabled to false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.308
+!MESSAGE [Log]	[2026-04-13T10:21:09.553Z] lserver: Attached new listener and notified of current config.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.310
+!MESSAGE [Log]	[2026-04-13T10:21:09.553Z] lserver: Attached new listener and notified of current config.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.340
+!MESSAGE [Info]	[2026-04-13T10:21:10.656Z] lserver: Migrated agent config to CLI format: C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.343
+!MESSAGE [Info]	[2026-04-13T10:21:10.656Z] lserver: MCP: Manager initialized, waiting for auth before discovering servers
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.345
+!MESSAGE [Info]	[2026-04-13T10:21:10.656Z] lserver: MCP manager: initialized with 2 configs
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.348
+!MESSAGE [Info]	[2026-04-13T10:21:10.699Z] lserver: Current history total size: 4118233 Bytes, max allowed: 209715200 Bytes
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.350
+!MESSAGE [Info]	[2026-04-13T10:21:10.660Z] lserver: Auth not ready (state: PENDING_CONNECTION), waiting before discovering MCP servers
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.352
+!MESSAGE [Info]	[2026-04-13T10:21:11.269Z] lserver: File watcher triggered - isProgrammaticChange: false, lastProgrammaticState: false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.354
+!MESSAGE [Info]	[2026-04-13T10:21:11.268Z] lserver: MCP config file changed: C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.368
+!MESSAGE [Log]	[2026-04-13T10:21:11.366Z] lserver: Read configuration customizationArn=undefined
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.370
+!MESSAGE [Log]	[2026-04-13T10:21:11.366Z] lserver: Read configuration optOutTelemetryPreference=OPTIN
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.373
+!MESSAGE [Log]	[2026-04-13T10:21:11.366Z] lserver: Read configuration optOutTelemetryPreference=OPTIN
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.375
+!MESSAGE [Log]	[2026-04-13T10:21:11.366Z] lserver: Read configuration customizationArn=undefined
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.398
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Read сonfiguration includeSuggestionsWithCodeReferences=false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.428
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Read сonfiguration includeSuggestionsWithCodeReferences=false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.432
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Read configuration shareCodeWhispererContentWithAWS=true
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.434
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Chat configuration updated customizationArn to undefined
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.437
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Read configuration shareCodeWhispererContentWithAWS=true
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.439
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Updating configuration of local context server
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.442
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Chat configuration telemetry preference to OPTIN
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.444
+!MESSAGE [Info]	[2026-04-13T10:21:11.390Z] lserver: Vector library initializing with GPU acceleration: false, index worker thread count: 0
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:11.446
+!MESSAGE [Log]	[2026-04-13T10:21:11.390Z] lserver: Setting project context indexing enabled to false
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.306
+!MESSAGE [Info]	[2026-04-13T10:21:13.275Z] lserver: Reinitializing MCP servers
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:13.308
+!MESSAGE [Warning]	[2026-04-13T10:21:13.279Z] lserver: Agent config not found at c:\dev\eclipseWorkspaces\Forqa\RemoteSystemsTempFiles\.amazonq\agents\default.json, skipping.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.321
+!MESSAGE [Info]	[2026-04-13T10:21:13.275Z] lserver: MCP: closing all clients and tracked processes
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.324
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'db-mf' and originalName: 'db-mf' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.326
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'word-document-server' and originalName: 'word-document-server' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.328
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'bitbucket' and originalName: 'bitbucket' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.330
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'global-jdbc' and originalName: 'global-jdbc' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.332
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'excel' and originalName: 'excel' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.334
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'excel-mcp-server' and originalName: 'excel-mcp-server' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.336
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'skill' and originalName: 'skill' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.338
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'mssql' and originalName: 'mssql' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:13.340
+!MESSAGE [Warning]	[2026-04-13T10:21:13.285Z] lserver: MCP config not found at c:\dev\eclipseWorkspaces\Forqa\RemoteSystemsTempFiles\.amazonq\mcp.json, skipping.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:13.342
+!MESSAGE [Info]	[2026-04-13T10:21:13.282Z] lserver: Loaded MCP server with sanitizedName: 'awsdoc' and originalName: 'awsdoc' from C:\Users\ukkepdo\.aws\amazonq\agents\default.json
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:19.281
+!MESSAGE [Warning]	[2026-04-13T10:21:13.285Z] lserver: MCP config not found at C:\Users\ukkepdo\.aws\amazonq\mcp.json, skipping.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.284
+!MESSAGE [Info]	[2026-04-13T10:21:13.285Z] lserver: Successfully processed 2 agent config files and legacy MCP configs
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.286
+!MESSAGE [Info]	[2026-04-13T10:21:13.285Z] lserver: Loaded 0 servers from legacy MCP configs
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.288
+!MESSAGE [Info]	[2026-04-13T10:21:13.286Z] lserver: MCP: server 'db-mf' is disabled by persona settings, skipping
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.290
+!MESSAGE [Info]	[2026-04-13T10:21:13.286Z] lserver: Using agent configuration
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.292
+!MESSAGE [Info]	[2026-04-13T10:21:13.292Z] lserver: MCP: Executing command: python C:\dev\mcp\Office-Word-MCP-Server-main\word_mcp_server.py word-mcp-server word_mcp_server (env: MCP_TRANSPORT)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.294
+!MESSAGE [Info]	[2026-04-13T10:21:13.286Z] lserver: MCP: initializing 8 servers with max concurrency of 5
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.296
+!MESSAGE [Info]	[2026-04-13T10:21:15.015Z] lserver: MCP: Executing command: C:\dev\jdk-21.0.5\jdk-21.0.5\bin\java.exe  -Xms512m -Xmx2g -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -cp C:\dev\mcp\mcp-jdbc-server-main\MCPServer-1.0.0-runner.jar;C:\dev\jdbc\mfjdbc\db2jcc.jar;C:\dev\jdbc\mfjdbc\db2jcc_javax.jar;C:\dev\jdbc\mfjdbc\db2jcc_license_cisuz.jar;C:\dev\jdbc\mfjdbc\db2jcc4.jar;C:\dev\jdbc\mfjdbc\sqljdbc.jar;C:\dev\jdbc\mfjdbc\sqljdbc4.jar io.quarkus.runner.GeneratedMain (env: jdbc.url, jdbc.user, jdbc.password)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.299
+!MESSAGE [Info]	[2026-04-13T10:21:13.292Z] lserver: MCP: Connecting MCP server using StdioClientTransport
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.301
+!MESSAGE [Info]	[2026-04-13T10:21:16.755Z] lserver: MCP: Executing command: npx -y @nexus2520/bitbucket-mcp-server@latest (env: BITBUCKET_BASE_URL, BITBUCKET_USERNAME, BITBUCKET_TOKEN, NODE_TLS_REJECT_UNAUTHORIZED)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.318
+!MESSAGE [Info]	[2026-04-13T10:21:15.015Z] lserver: MCP: Connecting MCP server using StdioClientTransport
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.320
+!MESSAGE [Info]	[2026-04-13T10:21:19.205Z] lserver: MCP: Executing command: cmd /c C:\Users\ukkepdo\.local\bin\excel-mcp-server.exe stdio (env: EXCEL_FILES_PATH)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.323
+!MESSAGE [Info]	[2026-04-13T10:21:16.755Z] lserver: MCP: Connecting MCP server using StdioClientTransport
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.325
+!MESSAGE [Info]	[2026-04-13T10:21:19.237Z] lserver: MCP: Executing command: uvx excel-mcp-server stdio (env: EXCEL_FILES_PATH)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.327
+!MESSAGE [Info]	[2026-04-13T10:21:19.205Z] lserver: MCP: Connecting MCP server using StdioClientTransport
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:19.329
+!MESSAGE [Info]	[2026-04-13T10:21:19.237Z] lserver: MCP: Connecting MCP server using StdioClientTransport
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:20.763
+!MESSAGE [Warning]	[2026-04-13T10:21:20.762Z] lserver: Auth not ready after 10000ms, starting profile monitor without discovery
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:20.766
+!MESSAGE [Info]	[2026-04-13T10:21:20.762Z] lserver: ProfileStatusMonitor started - checking MCP configuration every 24 hours
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.475
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_describe_table
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.486
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_execute_query_md
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.488
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_execute_query
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.526
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_get_schemas
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.542
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_filter_table_names
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.550
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_query_database
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.566
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_get_tables
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.569
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_sparql_list_entity_types
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.581
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_sparql_func
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.583
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_sparql_list_entity_types_samples
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.586
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_sparql_list_entity_types_detailed
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.588
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_spasql_query
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.590
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_sparql_list_ontologies
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.592
+!MESSAGE [Info]	[2026-04-13T10:21:24.372Z] lserver: MCP: registered tool jdbc_describe_table (original: jdbc_describe_table)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.595
+!MESSAGE [Info]	[2026-04-13T10:21:24.369Z] lserver: MCP: discovered tool global-jdbc::jdbc_virtuoso_support_ai
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.597
+!MESSAGE [Info]	[2026-04-13T10:21:24.374Z] lserver: MCP: registered tool jdbc_execute_query_md (original: jdbc_execute_query_md)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.599
+!MESSAGE [Info]	[2026-04-13T10:21:24.373Z] lserver: MCP: registered tool jdbc_execute_query (original: jdbc_execute_query)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.602
+!MESSAGE [Info]	[2026-04-13T10:21:24.377Z] lserver: MCP: registered tool jdbc_get_schemas (original: jdbc_get_schemas)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.604
+!MESSAGE [Info]	[2026-04-13T10:21:24.376Z] lserver: MCP: registered tool jdbc_filter_table_names (original: jdbc_filter_table_names)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.624
+!MESSAGE [Info]	[2026-04-13T10:21:24.379Z] lserver: MCP: registered tool jdbc_query_database (original: jdbc_query_database)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.627
+!MESSAGE [Info]	[2026-04-13T10:21:24.378Z] lserver: MCP: registered tool jdbc_get_tables (original: jdbc_get_tables)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.644
+!MESSAGE [Info]	[2026-04-13T10:21:24.381Z] lserver: MCP: registered tool jdbc_sparql_list_entity_types (original: jdbc_sparql_list_entity_types)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.696
+!MESSAGE [Info]	[2026-04-13T10:21:24.380Z] lserver: MCP: registered tool jdbc_sparql_func (original: jdbc_sparql_func)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.707
+!MESSAGE [Info]	[2026-04-13T10:21:24.383Z] lserver: MCP: registered tool jdbc_sparql_list_entity_types_samples (original: jdbc_sparql_list_entity_types_samples)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.709
+!MESSAGE [Info]	[2026-04-13T10:21:24.382Z] lserver: MCP: registered tool jdbc_sparql_list_entity_types_detailed (original: jdbc_sparql_list_entity_types_detailed)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.716
+!MESSAGE [Info]	[2026-04-13T10:21:24.386Z] lserver: MCP: registered tool jdbc_spasql_query (original: jdbc_spasql_query)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.718
+!MESSAGE [Info]	[2026-04-13T10:21:24.384Z] lserver: MCP: registered tool jdbc_sparql_list_ontologies (original: jdbc_sparql_list_ontologies)
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:24.719
+!MESSAGE [Warning]	[2026-04-13T10:21:24.415Z] lserver: MCP [global-jdbc] stderr: __  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2026-04-13 13:21:24,105 INFO  [io.quarkus] (main) MCPServer 1.0.0 on JVM (powered by Quarkus 3.20.0) started in 4.412s.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:24.719
+!MESSAGE [Info]	[2026-04-13T10:21:24.387Z] lserver: MCP: registered tool jdbc_virtuoso_support_ai (original: jdbc_virtuoso_support_ai)
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:24.720
+!MESSAGE [Warning]	[2026-04-13T10:21:24.416Z] lserver: MCP [global-jdbc] stderr: 2026-04-13 13:21:24,416 INFO  [io.quarkus] (main) Installed features: [cdi, mcp-server-stdio, qute, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:24.721
+!MESSAGE [Warning]	[2026-04-13T10:21:24.416Z] lserver: MCP [global-jdbc] stderr: 2026-04-13 13:21:24,415 INFO  [io.quarkus] (main) Profile prod activated.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.051
+!MESSAGE [Info]	[2026-04-13T10:21:29.047Z] lserver: Processing 1 workspace folders...
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.052
+!MESSAGE [Log]	[2026-04-13T10:21:29.048Z] lserver: Attached new listener and notified of current config.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.053
+!MESSAGE [Info]	[2026-04-13T10:21:29.048Z] lserver: Local context server has been initialized
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.115
+!MESSAGE [Info]	[2026-04-13T10:21:29.110Z] lserver: ProcessWorkspaceFolders complete. 0 files found. 0 files exceeded 10 MB
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.116
+!MESSAGE [Info]	[2026-04-13T10:21:29.111Z] lserver: Context index built successfully
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-04-13 13:21:29.117
+!MESSAGE [Warning]	[2026-04-13T10:21:29.116Z] lserver: MCP [word-document-server] stderr: +-----------------------------------------------------------------------------+
+|                                                                             |
+|                        \u2584\u2580\u2580 \u2584\u2580\u2588 \u2588\u2580\u2580 \u2580\u2588\u2580 \u2588\u2580\u2584\u2580\u2588 \u2588\u2580\u2580 \u2588\u2580\u2588                        |
+|                        \u2588\u2580  \u2588\u2580\u2588 \u2584\u2584\u2588  \u2588  \u2588 \u2580 \u2588 \u2588\u2584\u2584 \u2588\u2580\u2580                        |
+|                                                                             |
+|                              FastMCP 2.13.0.2                               |
+|                                                                             |
+|                                                                             |
+|                    \U0001f5a5  Server name: Word Document Server                     |
+|                                                                             |
+|                    \U0001f4e6 Transport:   STDIO                                    |
+|                                                                             |
+|                    \U0001f4da Docs:        https://gofastmcp.com                    |
+|                    \U0001f680 Hosting:     https://fastmcp.cloud                    |
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+[04/13/26 13:21:29] INFO     Starting MCP server 'Word Document  server.py:1966
+                             Server' with transport 'stdio'
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.221
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::apply_formula
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.222
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::format_range
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.223
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::read_data_from_excel
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.225
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::validate_formula_syntax
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.227
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::create_worksheet
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.227
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::create_chart
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.228
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::create_pivot_table
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.229
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::create_table
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.230
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::copy_worksheet
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.231
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::create_workbook
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.232
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::write_data_to_excel
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.233
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::get_workbook_metadata
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.234
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::rename_worksheet
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.234
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::delete_worksheet
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.235
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::unmerge_cells
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.236
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::merge_cells
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.237
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::copy_range
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.238
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::get_merged_cells
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.239
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::validate_excel_range
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.239
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::delete_range
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.240
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::insert_rows
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.241
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::get_data_validation_info
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.242
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::delete_sheet_rows
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.243
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::insert_columns
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.244
+!MESSAGE [Info]	[2026-04-13T10:21:29.184Z] lserver: MCP: registered tool apply_formula (original: apply_formula)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.245
+!MESSAGE [Info]	[2026-04-13T10:21:29.182Z] lserver: MCP: discovered tool excel-mcp-server::delete_sheet_columns
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.245
+!MESSAGE [Info]	[2026-04-13T10:21:29.192Z] lserver: MCP: registered tool format_range (original: format_range)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.246
+!MESSAGE [Info]	[2026-04-13T10:21:29.185Z] lserver: MCP: registered tool validate_formula_syntax (original: validate_formula_syntax)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.247
+!MESSAGE [Info]	[2026-04-13T10:21:29.196Z] lserver: MCP: registered tool write_data_to_excel (original: write_data_to_excel)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.248
+!MESSAGE [Info]	[2026-04-13T10:21:29.194Z] lserver: MCP: registered tool read_data_from_excel (original: read_data_from_excel)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.249
+!MESSAGE [Info]	[2026-04-13T10:21:29.197Z] lserver: MCP: registered tool create_worksheet (original: create_worksheet)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.250
+!MESSAGE [Info]	[2026-04-13T10:21:29.201Z] lserver: MCP: registered tool create_pivot_table (original: create_pivot_table)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.251
+!MESSAGE [Info]	[2026-04-13T10:21:29.196Z] lserver: MCP: registered tool create_workbook (original: create_workbook)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.252
+!MESSAGE [Info]	[2026-04-13T10:21:29.204Z] lserver: MCP: registered tool copy_worksheet (original: copy_worksheet)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.253
+!MESSAGE [Info]	[2026-04-13T10:21:29.204Z] lserver: MCP: registered tool delete_worksheet (original: delete_worksheet)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.253
+!MESSAGE [Info]	[2026-04-13T10:21:29.203Z] lserver: MCP: registered tool create_table (original: create_table)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.254
+!MESSAGE [Info]	[2026-04-13T10:21:29.198Z] lserver: MCP: registered tool create_chart (original: create_chart)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.255
+!MESSAGE [Info]	[2026-04-13T10:21:29.206Z] lserver: MCP: registered tool get_workbook_metadata (original: get_workbook_metadata)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.256
+!MESSAGE [Info]	[2026-04-13T10:21:29.205Z] lserver: MCP: registered tool rename_worksheet (original: rename_worksheet)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.257
+!MESSAGE [Info]	[2026-04-13T10:21:29.208Z] lserver: MCP: registered tool unmerge_cells (original: unmerge_cells)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.258
+!MESSAGE [Info]	[2026-04-13T10:21:29.207Z] lserver: MCP: registered tool merge_cells (original: merge_cells)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.258
+!MESSAGE [Info]	[2026-04-13T10:21:29.212Z] lserver: MCP: registered tool delete_range (original: delete_range)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.259
+!MESSAGE [Info]	[2026-04-13T10:21:29.211Z] lserver: MCP: registered tool copy_range (original: copy_range)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.260
+!MESSAGE [Info]	[2026-04-13T10:21:29.208Z] lserver: MCP: registered tool get_merged_cells (original: get_merged_cells)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.261
+!MESSAGE [Info]	[2026-04-13T10:21:29.214Z] lserver: MCP: registered tool get_data_validation_info (original: get_data_validation_info)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.262
+!MESSAGE [Info]	[2026-04-13T10:21:29.213Z] lserver: MCP: registered tool validate_excel_range (original: validate_excel_range)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.263
+!MESSAGE [Info]	[2026-04-13T10:21:29.216Z] lserver: MCP: registered tool insert_columns (original: insert_columns)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.264
+!MESSAGE [Info]	[2026-04-13T10:21:29.215Z] lserver: MCP: registered tool insert_rows (original: insert_rows)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.264
+!MESSAGE [Info]	[2026-04-13T10:21:29.218Z] lserver: MCP: registered tool delete_sheet_columns (original: delete_sheet_columns)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.265
+!MESSAGE [Info]	[2026-04-13T10:21:29.217Z] lserver: MCP: registered tool delete_sheet_rows (original: delete_sheet_rows)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.289
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::create_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.290
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::copy_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.292
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::get_document_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.295
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::get_document_outline
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.297
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::get_document_xml
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.298
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::insert_header_near_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.299
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::insert_line_or_paragraph_near_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.299
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::insert_numbered_list_near_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.300
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_paragraph
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.301
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_heading
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.302
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_picture
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.303
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_table
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.304
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_page_break
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.313
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::get_document_info
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.314
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::search_and_replace
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.315
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::create_custom_style
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.316
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::format_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.317
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::format_table
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.318
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::set_table_cell_shading
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.318
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::apply_table_alternating_rows
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.319
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::highlight_table_header
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.320
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::merge_table_cells
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.321
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::merge_table_cells_horizontal
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.325
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::merge_table_cells_vertical
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.326
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::set_table_cell_alignment
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.347
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::set_table_alignment_all
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.350
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::delete_paragraph
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.352
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::protect_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.353
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::unprotect_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.354
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::list_available_documents
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.355
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_footnote_after_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.356
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_footnote_before_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.357
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_footnote_enhanced
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.358
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_endnote_to_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.358
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::customize_footnote_style
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.360
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::delete_footnote_from_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.361
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_footnote_robust
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.362
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::validate_document_footnotes
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.363
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::delete_footnote_robust
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.364
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::get_paragraph_text_from_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.365
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::find_text_in_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.366
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::convert_to_pdf
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.367
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::replace_paragraph_block_below_header
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.368
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::replace_block_between_manual_anchors
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.369
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::get_all_comments
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.370
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::get_comments_by_author
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.371
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::get_comments_for_paragraph
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.372
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::set_table_column_width
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.373
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::set_table_column_widths
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.374
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::set_table_width
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.374
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::auto_fit_table_columns
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.375
+!MESSAGE [Info]	[2026-04-13T10:21:29.222Z] lserver: MCP: discovered tool word-document-server::add_footnote_to_document
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.376
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::format_table_cell_text
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.377
+!MESSAGE [Info]	[2026-04-13T10:21:29.224Z] lserver: MCP: registered tool create_document (original: create_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.378
+!MESSAGE [Info]	[2026-04-13T10:21:29.223Z] lserver: MCP: discovered tool word-document-server::set_table_cell_padding
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.379
+!MESSAGE [Info]	[2026-04-13T10:21:29.226Z] lserver: MCP: registered tool get_document_info (original: get_document_info)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.379
+!MESSAGE [Info]	[2026-04-13T10:21:29.225Z] lserver: MCP: registered tool copy_document (original: copy_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.380
+!MESSAGE [Info]	[2026-04-13T10:21:29.228Z] lserver: MCP: registered tool get_document_outline (original: get_document_outline)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.381
+!MESSAGE [Info]	[2026-04-13T10:21:29.226Z] lserver: MCP: registered tool get_document_text (original: get_document_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.382
+!MESSAGE [Info]	[2026-04-13T10:21:29.229Z] lserver: MCP: registered tool get_document_xml (original: get_document_xml)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.383
+!MESSAGE [Info]	[2026-04-13T10:21:29.228Z] lserver: MCP: registered tool list_available_documents (original: list_available_documents)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.384
+!MESSAGE [Info]	[2026-04-13T10:21:29.231Z] lserver: MCP: registered tool insert_line_or_paragraph_near_text (original: insert_line_or_paragraph_near_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.385
+!MESSAGE [Info]	[2026-04-13T10:21:29.230Z] lserver: MCP: registered tool insert_header_near_text (original: insert_header_near_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.386
+!MESSAGE [Info]	[2026-04-13T10:21:29.234Z] lserver: MCP: registered tool add_paragraph (original: add_paragraph)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.387
+!MESSAGE [Info]	[2026-04-13T10:21:29.232Z] lserver: MCP: registered tool insert_numbered_list_near_text (original: insert_numbered_list_near_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.388
+!MESSAGE [Info]	[2026-04-13T10:21:29.237Z] lserver: MCP: registered tool add_picture (original: add_picture)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.389
+!MESSAGE [Info]	[2026-04-13T10:21:29.236Z] lserver: MCP: registered tool add_heading (original: add_heading)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.389
+!MESSAGE [Info]	[2026-04-13T10:21:29.238Z] lserver: MCP: registered tool add_page_break (original: add_page_break)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.390
+!MESSAGE [Info]	[2026-04-13T10:21:29.238Z] lserver: MCP: registered tool add_table (original: add_table)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.391
+!MESSAGE [Info]	[2026-04-13T10:21:29.240Z] lserver: MCP: registered tool search_and_replace (original: search_and_replace)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.392
+!MESSAGE [Info]	[2026-04-13T10:21:29.239Z] lserver: MCP: registered tool delete_paragraph (original: delete_paragraph)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.393
+!MESSAGE [Info]	[2026-04-13T10:21:29.243Z] lserver: MCP: registered tool format_text (original: format_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.394
+!MESSAGE [Info]	[2026-04-13T10:21:29.241Z] lserver: MCP: registered tool create_custom_style (original: create_custom_style)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.395
+!MESSAGE [Info]	[2026-04-13T10:21:29.245Z] lserver: MCP: registered tool set_table_cell_shading (original: set_table_cell_shading)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.395
+!MESSAGE [Info]	[2026-04-13T10:21:29.244Z] lserver: MCP: registered tool format_table (original: format_table)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.396
+!MESSAGE [Info]	[2026-04-13T10:21:29.248Z] lserver: MCP: registered tool highlight_table_header (original: highlight_table_header)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.397
+!MESSAGE [Info]	[2026-04-13T10:21:29.247Z] lserver: MCP: registered tool apply_table_alternating_rows (original: apply_table_alternating_rows)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.398
+!MESSAGE [Info]	[2026-04-13T10:21:29.250Z] lserver: MCP: registered tool merge_table_cells_horizontal (original: merge_table_cells_horizontal)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.398
+!MESSAGE [Info]	[2026-04-13T10:21:29.249Z] lserver: MCP: registered tool merge_table_cells (original: merge_table_cells)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.399
+!MESSAGE [Info]	[2026-04-13T10:21:29.253Z] lserver: MCP: registered tool set_table_cell_alignment (original: set_table_cell_alignment)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.400
+!MESSAGE [Info]	[2026-04-13T10:21:29.252Z] lserver: MCP: registered tool merge_table_cells_vertical (original: merge_table_cells_vertical)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.401
+!MESSAGE [Info]	[2026-04-13T10:21:29.254Z] lserver: MCP: registered tool protect_document (original: protect_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.402
+!MESSAGE [Info]	[2026-04-13T10:21:29.254Z] lserver: MCP: registered tool set_table_alignment_all (original: set_table_alignment_all)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.402
+!MESSAGE [Info]	[2026-04-13T10:21:29.256Z] lserver: MCP: registered tool add_footnote_to_document (original: add_footnote_to_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.403
+!MESSAGE [Info]	[2026-04-13T10:21:29.255Z] lserver: MCP: registered tool unprotect_document (original: unprotect_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.404
+!MESSAGE [Info]	[2026-04-13T10:21:29.258Z] lserver: MCP: registered tool add_footnote_before_text (original: add_footnote_before_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.405
+!MESSAGE [Info]	[2026-04-13T10:21:29.257Z] lserver: MCP: registered tool add_footnote_after_text (original: add_footnote_after_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.406
+!MESSAGE [Info]	[2026-04-13T10:21:29.260Z] lserver: MCP: registered tool add_endnote_to_document (original: add_endnote_to_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.406
+!MESSAGE [Info]	[2026-04-13T10:21:29.259Z] lserver: MCP: registered tool add_footnote_enhanced (original: add_footnote_enhanced)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.407
+!MESSAGE [Info]	[2026-04-13T10:21:29.262Z] lserver: MCP: registered tool delete_footnote_from_document (original: delete_footnote_from_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.408
+!MESSAGE [Info]	[2026-04-13T10:21:29.261Z] lserver: MCP: registered tool customize_footnote_style (original: customize_footnote_style)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.409
+!MESSAGE [Info]	[2026-04-13T10:21:29.268Z] lserver: MCP: registered tool validate_document_footnotes (original: validate_document_footnotes)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.410
+!MESSAGE [Info]	[2026-04-13T10:21:29.267Z] lserver: MCP: registered tool add_footnote_robust (original: add_footnote_robust)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.411
+!MESSAGE [Info]	[2026-04-13T10:21:29.270Z] lserver: MCP: registered tool get_paragraph_text_from_document (original: get_paragraph_text_from_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.411
+!MESSAGE [Info]	[2026-04-13T10:21:29.269Z] lserver: MCP: registered tool delete_footnote_robust (original: delete_footnote_robust)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.412
+!MESSAGE [Info]	[2026-04-13T10:21:29.274Z] lserver: MCP: registered tool convert_to_pdf (original: convert_to_pdf)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.413
+!MESSAGE [Info]	[2026-04-13T10:21:29.273Z] lserver: MCP: registered tool find_text_in_document (original: find_text_in_document)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.414
+!MESSAGE [Info]	[2026-04-13T10:21:29.276Z] lserver: MCP: registered tool replace_block_between_manual_anchors (original: replace_block_between_manual_anchors)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.415
+!MESSAGE [Info]	[2026-04-13T10:21:29.275Z] lserver: MCP: registered tool replace_paragraph_block_below_header (original: replace_paragraph_block_below_header)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.416
+!MESSAGE [Info]	[2026-04-13T10:21:29.278Z] lserver: MCP: registered tool get_comments_by_author (original: get_comments_by_author)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.416
+!MESSAGE [Info]	[2026-04-13T10:21:29.277Z] lserver: MCP: registered tool get_all_comments (original: get_all_comments)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.417
+!MESSAGE [Info]	[2026-04-13T10:21:29.279Z] lserver: MCP: registered tool set_table_column_width (original: set_table_column_width)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.418
+!MESSAGE [Info]	[2026-04-13T10:21:29.279Z] lserver: MCP: registered tool get_comments_for_paragraph (original: get_comments_for_paragraph)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.419
+!MESSAGE [Info]	[2026-04-13T10:21:29.281Z] lserver: MCP: registered tool set_table_width (original: set_table_width)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.420
+!MESSAGE [Info]	[2026-04-13T10:21:29.280Z] lserver: MCP: registered tool set_table_column_widths (original: set_table_column_widths)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.420
+!MESSAGE [Info]	[2026-04-13T10:21:29.284Z] lserver: MCP: registered tool format_table_cell_text (original: format_table_cell_text)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.421
+!MESSAGE [Info]	[2026-04-13T10:21:29.282Z] lserver: MCP: registered tool auto_fit_table_columns (original: auto_fit_table_columns)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.422
+!MESSAGE [Info]	[2026-04-13T10:21:29.286Z] lserver: MCP: registered tool set_table_cell_padding (original: set_table_cell_padding)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:29.644
+!MESSAGE [Log]	[2026-04-13T10:21:29.639Z] lserver: received 5 context command items
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:30.117
+!MESSAGE [Info]	[2026-04-13T10:21:30.114Z] lserver: Processing 1 workspace folders...
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:30.141
+!MESSAGE [Info]	[2026-04-13T10:21:30.136Z] lserver: ProcessWorkspaceFolders complete. 0 files found. 0 files exceeded 10 MB
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-04-13 13:21:30.143
+!MESSAGE [Info]	[2026-04-13T10:21:30.136Z] lserver: Context index built successfully
