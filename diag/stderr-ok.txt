@@ -1,1 +1,0 @@
-SessionEnd hook [powershell.exe -ExecutionPolicy Bypass -File C:/ProgramData/AIM/claude-code-hook.ps1] failed: Hook cancelled
