@@ -1,0 +1,69 @@
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:18.898
+!MESSAGE [DIAG-LISTENER] ADD listener=795631811 totalListeners=1 protocolHandlerActive=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:18.901
+!MESSAGE [DIAG-MODEL] view=1627887210 INITIAL model=795631811 cli=2123522237
+
+!ENTRY com.anthropic.eclipse.claude 2 0 2026-04-28 13:38:20.072
+!MESSAGE [relocate] thisAnchor.parent=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@2165b170 (tags: [Oomph, Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@bc83665], toBeRendered: true, visible: true, containerData: 6598) targetStack=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@2165b170 (tags: [Oomph, Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@bc83665], toBeRendered: true, visible: true, containerData: 6598) newAnchor.parent=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@2165b170 (tags: [Oomph, Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@bc83665], toBeRendered: true, visible: true, containerData: 6598)
+
+!ENTRY com.anthropic.eclipse.claude 2 0 2026-04-28 13:38:20.077
+!MESSAGE [relocate] already in target stack
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:21.178
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_started raw={"type":"system","subtype":"hook_started","hook_id":"1afbad79-0e6f-4dc8-825b-d4293c57520a","hook_name":"SessionStart:startup","hook_event":"SessionStart","uuid":"e0914d34-2d06-4ab0-bd8e-a5193a986fd5","session_id":"54277868-784c-458e-b88b-908619e671d8"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:21.180
+!MESSAGE [DIAG-MSG] model=795631811 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:21.181
+!MESSAGE [DIAG] SystemNotification subtype=hook_started hook=SessionStart:startup hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:24.484
+!MESSAGE [DIAG-FLAG] renderingSuppressed: false -> false (handleInput)
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:24.485
+!MESSAGE [DIAG-TIMING] T0 send at 1777372704485 viewModel=795631811 viewHash=1627887210
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:24.512
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:32.489
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_progress raw={"type":"system","subtype":"hook_progress","hook_id":"1afbad79-0e6f-4dc8-825b-d4293c57520a","hook_name":"SessionStart:startup","hook_event":"SessionStart","stdout":"","stderr":"urllib3\\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\r\n","output":"urllib3\\connectionpool.py:1097: InsecureRequestWarning: Un
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:32.492
+!MESSAGE [DIAG-MSG] model=795631811 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:32.493
+!MESSAGE [DIAG] SystemNotification subtype=hook_progress hook=SessionStart:startup hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:33.652
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_response raw={"type":"system","subtype":"hook_response","hook_id":"1afbad79-0e6f-4dc8-825b-d4293c57520a","hook_name":"SessionStart:startup","hook_event":"SessionStart","output":"urllib3\\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\r\nnull\r\n","stdout":"null\r\n","stderr":"urllib3\\connectionpool.py:1097: InsecureRe
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:33.654
+!MESSAGE [DIAG-MSG] model=795631811 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:33.656
+!MESSAGE [DIAG] SystemNotification subtype=hook_response hook=SessionStart:startup hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.869
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=init raw={"type":"system","subtype":"init","cwd":"C:\\dev\\eclipseWorkspaces\\Forqa\\RemoteSystemsTempFiles","session_id":"54277868-784c-458e-b88b-908619e671d8","tools":["Task","AskUserQuestion","Bash","CronCreate","CronDelete","CronList","Edit","EnterPlanMode","EnterWorktree","ExitPlanMode","ExitWorktree","Glob","Grep","NotebookEdit","Read","ScheduleWakeup","Skill","TaskOutput","TaskStop","TodoWrite","ToolSearch","WebFetch","Write"],"mcp_servers":[],"model":"eu.anthropic.claude-sonnet-4-5-20250929-v1:0"
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.871
+!MESSAGE [DIAG-MSG] model=795631811 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.874
+!MESSAGE [DIAG-RAW-RESULT] subtype=success resultLen=0 raw={"type":"result","subtype":"success","is_error":false,"duration_ms":12196,"duration_api_ms":0,"num_turns":2,"result":"","stop_reason":null,"session_id":"54277868-784c-458e-b88b-908619e671d8","total_cost_usd":0,"usage":{"input_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":0,"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":0,"ephemeral_5m_input_tokens":0},"inference_geo":"","iterations":[],"speed":"standard"},"modelUsage":{},"permission_denials":[],"fast_mode_state":"off","uuid":"74db1f2a-8aba-4a83-861e-f98c41c3bb52"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.875
+!MESSAGE [DIAG-MSG] model=795631811 recv=ResultMessage subtype=success isError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.877
+!MESSAGE [DIAG] handleResult: subtype=success isError=false cost=0.0 duration=12196ms turns=2 resultLen=0 resultPreview='' sessionId=54277868-784c-458e-b88b-908619e671d8
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.879
+!MESSAGE [DIAG-TIMING] T3 onResultReceived +21393ms
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 13:38:45.902
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=224 rawTotalLen=224
