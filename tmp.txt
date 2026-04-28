@@ -1,0 +1,1 @@
+● UserPromptSubmit operation blocked by hook:                                                                             obfuscation attack detected
