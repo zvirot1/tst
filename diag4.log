@@ -1,0 +1,132 @@
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:38.585
+!MESSAGE [DIAG-LISTENER] ADD listener=1353998509 totalListeners=1 protocolHandlerActive=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:38.588
+!MESSAGE [DIAG-MODEL] view=423133465 INITIAL model=1353998509 cli=648987535
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:39.923
+!MESSAGE [Stop] taskkill /F /T /PID 40804 dispatched
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:39.990
+!MESSAGE [Stop]   killing descendant PID 69176
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:39.994
+!MESSAGE [DIAG-MODEL] view=423133465 replaced oldModel=1353998509 -> newModel=1431773022
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:39.996
+!MESSAGE [DIAG-LISTENER] REMOVE listener=1353998509 totalListeners=0 protocolHandlerActive=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:39.998
+!MESSAGE [DIAG-LISTENER] ADD listener=1431773022 totalListeners=1 protocolHandlerActive=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.095
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.136
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=29 rawTotalLen=29
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.153
+!MESSAGE [DIAG] StreamingTextWidget.finalizeContent rawLen=29 exactHalfDup=false head='Hi! How can I help you today?' tail=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.204
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=4
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.234
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=68 rawTotalLen=68
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.259
+!MESSAGE [DIAG] StreamingTextWidget.finalizeContent rawLen=68 exactHalfDup=false head='שלום! איך אני יכול לעזור לך היום? (Hello! How can I help you today?)' tail=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.306
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.364
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=34 rawTotalLen=34
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.435
+!MESSAGE [DIAG] StreamingTextWidget.finalizeContent rawLen=34 exactHalfDup=false head='Hello! How can I assist you today?' tail=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.489
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.532
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=293 rawTotalLen=293
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:40.568
+!MESSAGE [DIAG] StreamingTextWidget.finalizeContent rawLen=293 exactHalfDup=false head='Hi! I'm here to help. What would you like to work on today? I can assist with:\n\n- Reading, editing, or writing code\n- De' tail='ng through files\n- Explaining how code works\n- Or anything else related to your project\n\nJust let me know what you need!'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:42.158
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_started raw={"type":"system","subtype":"hook_started","hook_id":"ceb500b9-996f-4504-b946-d58612aa6a29","hook_name":"SessionStart:resume","hook_event":"SessionStart","uuid":"13e8f853-0848-48fc-ac82-f8cce957aeaa","session_id":"a0f648e7-9b40-4ad3-94fc-8e828b6c3928"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:42.163
+!MESSAGE [DIAG-MSG] model=1431773022 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:47.111
+!MESSAGE [DIAG-LISTENER] ADD listener=1814413487 totalListeners=1 protocolHandlerActive=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:47.113
+!MESSAGE [DIAG-MODEL] view=23095069 INITIAL model=1814413487 cli=256746011
+
+!ENTRY com.anthropic.eclipse.claude 2 0 2026-04-28 11:58:48.486
+!MESSAGE [relocate] thisAnchor.parent=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@23d0f6be (tags: [Oomph, Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4b4ea285], toBeRendered: true, visible: true, containerData: 6598) targetStack=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@23d0f6be (tags: [Oomph, Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4b4ea285], toBeRendered: true, visible: true, containerData: 6598) newAnchor.parent=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@23d0f6be (tags: [Oomph, Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4b4ea285], toBeRendered: true, visible: true, containerData: 6598)
+
+!ENTRY com.anthropic.eclipse.claude 2 0 2026-04-28 11:58:48.488
+!MESSAGE [relocate] already in target stack
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:49.761
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_started raw={"type":"system","subtype":"hook_started","hook_id":"b14db168-0438-4b22-bd6d-ac2ac8e69de3","hook_name":"SessionStart:startup","hook_event":"SessionStart","uuid":"68a04273-5959-499a-b8db-b21b0574c829","session_id":"bdc906f5-6f83-4184-ae86-219dab6d186e"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:49.763
+!MESSAGE [DIAG-MSG] model=1814413487 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:54.359
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_progress raw={"type":"system","subtype":"hook_progress","hook_id":"ceb500b9-996f-4504-b946-d58612aa6a29","hook_name":"SessionStart:resume","hook_event":"SessionStart","stdout":"","stderr":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\n","output":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\n","uuid":"69aadb10-1644-4571-ab5b-7ae4c5d92110","session_id":"a0f648e7-9b40-4ad3-94fc-8e828b6c3928"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:54.362
+!MESSAGE [DIAG-MSG] model=1431773022 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:56.552
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_response raw={"type":"system","subtype":"hook_response","hook_id":"ceb500b9-996f-4504-b946-d58612aa6a29","hook_name":"SessionStart:resume","hook_event":"SessionStart","output":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\nnull\r\n","stdout":"null\r\n","stderr":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\n","exit_code":0,"outcome":"success","uuid":"33129e17-85d8-45f8-8d59-c375489dd6be","session_id":"a0f648e7
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:58:56.554
+!MESSAGE [DIAG-MSG] model=1431773022 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:02.097
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_progress raw={"type":"system","subtype":"hook_progress","hook_id":"b14db168-0438-4b22-bd6d-ac2ac8e69de3","hook_name":"SessionStart:startup","hook_event":"SessionStart","stdout":"","stderr":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\n","output":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\n","uuid":"0bae455e-3c5c-4924-87ef-50a5aa84291f","session_id":"bdc906f5-6f83-4184-ae86-219dab6d186e"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:02.100
+!MESSAGE [DIAG-MSG] model=1814413487 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:03.855
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=hook_response raw={"type":"system","subtype":"hook_response","hook_id":"b14db168-0438-4b22-bd6d-ac2ac8e69de3","hook_name":"SessionStart:startup","hook_event":"SessionStart","output":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\nnull\r\n","stdout":"null\r\n","stderr":"\r\naws: [ERROR]: Error when retrieving token from sso: Token has expired and refresh failed\r\n","exit_code":0,"outcome":"success","uuid":"6ee898b2-20d3-4301-a3a6-677f4c925a92","session_id":"bdc906f
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:03.857
+!MESSAGE [DIAG-MSG] model=1814413487 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:57.024
+!MESSAGE [DIAG-FLAG] renderingSuppressed: false -> false (handleInput)
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:57.029
+!MESSAGE [DIAG-TIMING] T0 send at 1777366797026 viewModel=1814413487 viewHash=23095069
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 11:59:57.059
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=4
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 12:00:09.127
+!MESSAGE [DIAG-RAW-SYSTEM] subtype=init raw={"type":"system","subtype":"init","cwd":"C:\\dev\\eclipseWorkspaces\\Forqa\\RemoteSystemsTempFiles","session_id":"bdc906f5-6f83-4184-ae86-219dab6d186e","tools":["Task","AskUserQuestion","Bash","CronCreate","CronDelete","CronList","Edit","EnterPlanMode","EnterWorktree","ExitPlanMode","ExitWorktree","Glob","Grep","NotebookEdit","Read","ScheduleWakeup","Skill","TaskOutput","TaskStop","TodoWrite","ToolSearch","WebFetch","Write"],"mcp_servers":[],"model":"eu.anthropic.claude-sonnet-4-5-20250929-v1:0"
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 12:00:09.130
+!MESSAGE [DIAG-MSG] model=1814413487 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 12:00:09.132
+!MESSAGE [DIAG-RAW-RESULT] subtype=success resultLen=0 raw={"type":"result","subtype":"success","is_error":false,"duration_ms":12068,"duration_api_ms":0,"num_turns":2,"result":"","stop_reason":null,"session_id":"bdc906f5-6f83-4184-ae86-219dab6d186e","total_cost_usd":0,"usage":{"input_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":0,"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":0,"ephemeral_5m_input_tokens":0},"inference_geo":"","iterations":[],"speed":"standard"},"modelUsage":{},"permission_denials":[],"fast_mode_state":"off","uuid":"6294aa02-a240-4367-889e-f20187db2f83"}
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 12:00:09.135
+!MESSAGE [DIAG-MSG] model=1814413487 recv=ResultMessage subtype=success isError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 12:00:09.143
+!MESSAGE [DIAG] handleResult: subtype=success isError=false cost=0.0 duration=12068ms turns=2 resultLen=0 resultPreview='' sessionId=bdc906f5-6f83-4184-ae86-219dab6d186e
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-04-28 12:00:09.145
+!MESSAGE [DIAG-TIMING] T3 onResultReceived +12118ms
