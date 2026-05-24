@@ -1,0 +1,1923 @@
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:03:15.705
+!MESSAGE [DIAG-LISTENER] ADD listener=1654887749 totalListeners=1 protocolHandlerActive=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:03:15.707
+!MESSAGE [DIAG-MODEL] view=414754325 INITIAL model=1654887749 cli=1585049069
+
+!ENTRY com.anthropic.eclipse.claude 2 0 2026-05-24 10:03:16.696
+!MESSAGE [relocate] thisAnchor.parent=PartStack@78ad16b5=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@1723640f (tags: [], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@49822fac], renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@4e8b84f, toBeRendered: true, onTop: false, visible: true, containerData: 7857, accessibilityPhrase: null) targetStack=PartStack@78ad16b5=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@1723640f (tags: [], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@49822fac], renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@4e8b84f, toBeRendered: true, onTop: false, visible: true, containerData: 7857, accessibilityPhrase: null) newAnchor.parent=bottomRight=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@4178074f (tags: [Claude AI, General, active], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@18b32b54], renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@4e8b84f, toBeRendered: true, onTop: false, visible: true, containerData: 5403, accessibilityPhrase: null)
+
+!ENTRY com.anthropic.eclipse.claude 2 0 2026-05-24 10:03:16.788
+!MESSAGE [relocate] moved newAnchor into target stack (success)
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:03:20.444
+!MESSAGE [DIAG-MSG] model=1654887749 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:03:20.446
+!MESSAGE [DIAG] SystemNotification subtype=hook_started hook=SessionStart:startup hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:03:23.172
+!MESSAGE [DIAG-MSG] model=1654887749 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:03:23.173
+!MESSAGE [DIAG] SystemNotification subtype=hook_response hook=SessionStart:startup hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:28.758
+!MESSAGE [DIAG-FLAG] renderingSuppressed: false -> false (handleInput)
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:28.760
+!MESSAGE [DIAG-TIMING] T0 send at 1779606268759 viewModel=1654887749 viewHash=414754325
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:28.789
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=41 rawTotalLen=41
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:32.990
+!MESSAGE [DIAG-MSG] model=1654887749 recv=SystemInit
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:32.991
+!MESSAGE [DIAG-MSG] model=1654887749 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:32.991
+!MESSAGE [DIAG] SystemNotification subtype=status hook=null hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.186
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=message_start idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.187
+!MESSAGE [DIAG] handleMessageStart: prev usingStreamEvents=false currentStreamingBlock=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.188
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_start idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.190
+!MESSAGE [DIAG] handleContentBlockStart: index=0 type=thinking currentStreamingBlock=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.191
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.192
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.235
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.279
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.325
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.377
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.419
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.465
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.527
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.557
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.605
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.659
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.699
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.745
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.794
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.838
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.885
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.932
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:35.983
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.026
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.077
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.120
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.167
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.215
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.275
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.313
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.362
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.363
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.380
+!MESSAGE [DIAG-MSG] model=1654887749 recv=AssistantMessage
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.383
+!MESSAGE [DIAG] handleAssistantMessage: usingStreamEvents=true currentStreamingBlock=true preview=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.384
+!MESSAGE [DIAG] handleAssistantMessage SKIPPED: usingStreamEvents=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.385
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_stop idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.400
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_start idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.403
+!MESSAGE [DIAG] handleContentBlockStart: index=1 type=text currentStreamingBlock=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.404
+!MESSAGE [DIAG-TIMING] T1 onAssistantMessageStarted +7644ms
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.405
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.407
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='א'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.408
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.409
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.446
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.447
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ד'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.477
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.490
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.493
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.495
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ו'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.524
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=3
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.536
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=4
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.541
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.541
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='ק את'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.620
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.621
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' ק'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.633
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.635
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.682
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.682
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='צי'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.704
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=8
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.743
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.745
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.751
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=10
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.771
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=11
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.776
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.777
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ז'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.817
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=13
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.821
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.822
+!MESSAGE [DIAG] text_delta idx=1 len=7 snip='יכרון ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.831
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=15
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.843
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=16
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.867
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.868
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ר'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.885
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=7 rawTotalLen=23
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.916
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.917
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ל'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.930
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=24
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.962
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.964
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='וונ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:36.970
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=25
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.004
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=28
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.010
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.011
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip='טיים.'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.041
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=33
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.246
+!MESSAGE [DIAG-MSG] model=1654887749 recv=AssistantMessage
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.247
+!MESSAGE [DIAG] handleAssistantMessage: usingStreamEvents=true currentStreamingBlock=true preview='אבדוק את קבצי הזיכרון הרלוונטיים.'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.249
+!MESSAGE [DIAG] handleAssistantMessage SKIPPED: usingStreamEvents=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.251
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_stop idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.253
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_start idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.254
+!MESSAGE [DIAG] handleContentBlockStart: index=2 type=tool_use currentStreamingBlock=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.255
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.273
+!MESSAGE [DIAG] StreamingTextWidget.finalizeContent rawLen=33 exactHalfDup=false head='אבדוק את קבצי הזיכרון הרלוונטיים.' tail=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.814
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.815
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.816
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.847
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.849
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.850
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.852
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.853
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.855
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.857
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.858
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.859
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.861
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.862
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.883
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.885
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.888
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.889
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.890
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.891
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.892
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.894
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.895
+!MESSAGE [DIAG-MSG] model=1654887749 recv=AssistantMessage
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.896
+!MESSAGE [DIAG] handleAssistantMessage: usingStreamEvents=true currentStreamingBlock=true preview=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.897
+!MESSAGE [DIAG] handleAssistantMessage SKIPPED: usingStreamEvents=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.899
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_stop idx=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.900
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=message_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.901
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=message_stop idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:37.901
+!MESSAGE [DIAG-TIMING] T2 onAssistantMessageCompleted +9142ms hasRunningTools=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:46.707
+!MESSAGE [DIAG-MSG] model=1654887749 recv=UserMessage
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:46.716
+!MESSAGE [DIAG-MSG] model=1654887749 recv=SystemNotification
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:46.717
+!MESSAGE [DIAG] SystemNotification subtype=status hook=null hasError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.876
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=message_start idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.891
+!MESSAGE [DIAG] handleMessageStart: prev usingStreamEvents=true currentStreamingBlock=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.892
+!MESSAGE [DIAG] handleMessageStart REMOVED prev assistant block, len=33
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.893
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_start idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.894
+!MESSAGE [DIAG] handleContentBlockStart: index=0 type=thinking currentStreamingBlock=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.895
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:47.896
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.011
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.013
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.024
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.082
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.116
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.162
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.208
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.255
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.306
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.348
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.401
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.438
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.483
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.541
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.576
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.626
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.672
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.715
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.769
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.810
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.853
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.899
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.945
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:48.991
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.038
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.083
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.129
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.177
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.239
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.269
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.314
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.369
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.408
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.454
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.503
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.593
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.638
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.684
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.731
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.779
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.824
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.917
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:49.964
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.011
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.055
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.103
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.148
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.196
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.242
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.292
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.335
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.389
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.427
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.474
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.518
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.578
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.608
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.654
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.749
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.793
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.841
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.886
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.945
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:50.978
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.024
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.070
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.117
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.164
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.224
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.256
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.303
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.349
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.398
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.400
+!MESSAGE [DIAG-MSG] model=1654887749 recv=AssistantMessage
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.401
+!MESSAGE [DIAG] handleAssistantMessage: usingStreamEvents=true currentStreamingBlock=true preview=''
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.402
+!MESSAGE [DIAG] handleAssistantMessage SKIPPED: usingStreamEvents=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.403
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_stop idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.405
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_start idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.406
+!MESSAGE [DIAG] handleContentBlockStart: index=1 type=text currentStreamingBlock=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.407
+!MESSAGE [DIAG-TIMING] T1 onAssistantMessageStarted +22647ms
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.408
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.409
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.443
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.444
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='נ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.488
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.490
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='ה ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.536
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.538
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.539
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ס'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.552
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=2
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.580
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.582
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.596
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=5
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.606
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=6
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.632
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.633
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='כ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.662
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=7
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.689
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.691
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='ום'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.720
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=8
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.721
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.722
+!MESSAGE [DIAG] text_delta idx=1 len=6 snip=' של המ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.764
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.765
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ר'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.781
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=10
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.790
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=6 rawTotalLen=16
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.810
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.813
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ת'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.834
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=17
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.859
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.859
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip=' '
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.880
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=18
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.902
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.904
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.919
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=19
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.948
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.949
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='-91:'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.957
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=20
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.995
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:51.997
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip='\n\n---'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.008
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=24
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.041
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.042
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='\n\n##'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.046
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=29
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.081
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=33
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.087
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.089
+!MESSAGE [DIAG] text_delta idx=1 len=14 snip=' RUNHMR91 — המ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.134
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.136
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='רת'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.150
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=14 rawTotalLen=47
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.179
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.181
+!MESSAGE [DIAG] text_delta idx=1 len=11 snip=' CSBNKMT5 →'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.182
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=49
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.227
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.228
+!MESSAGE [DIAG] text_delta idx=1 len=13 snip=' CSTBCS91\n\n**'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.233
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=11 rawTotalLen=60
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.280
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.281
+!MESSAGE [DIAG] text_delta idx=1 len=6 snip='קלט:**'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.287
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=13 rawTotalLen=73
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.323
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.325
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip=' VS'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.331
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=6 rawTotalLen=79
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.366
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.367
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='AM `'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.373
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=82
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.413
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.414
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=86
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.416
+!MESSAGE [DIAG] text_delta idx=1 len=11 snip='CSBNKMT5` ('
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.430
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=11 rawTotalLen=97
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.458
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.460
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='א'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.503
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.504
+!MESSAGE [DIAG] text_delta idx=1 len=12 snip='ינדקס כספומט'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.506
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=98
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.542
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=12 rawTotalLen=110
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.564
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.565
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='ים'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.595
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.596
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='),'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.607
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=112
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.646
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=114
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.689
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.692
+!MESSAGE [DIAG] text_delta idx=1 len=10 snip=' LRECL=190'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.727
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=10 rawTotalLen=124
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.736
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.738
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='\n**פ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.780
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.784
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ל'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.806
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=128
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.818
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=129
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.846
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.847
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ט'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.879
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.879
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip=':** ט'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.919
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.920
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.927
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=130
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.935
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=135
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.971
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.973
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=136
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.974
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip='לת DB'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:52.997
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=141
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.011
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.012
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='2 `'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.057
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.058
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='B'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.075
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=144
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.115
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.116
+!MESSAGE [DIAG] text_delta idx=1 len=11 snip='LL.CSTBCS91'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.131
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=145
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.149
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=11 rawTotalLen=156
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.151
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.152
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='`,'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.192
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=158
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.197
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.198
+!MESSAGE [DIAG] text_delta idx=1 len=14 snip=' LRECL=206\n\n**'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.234
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=14 rawTotalLen=172
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.242
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.243
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='מה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.279
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=174
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.292
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.293
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.335
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.336
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ו'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.358
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=176
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.380
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.382
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='צ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.396
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=177
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.432
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.433
+!MESSAGE [DIAG] text_delta idx=1 len=8 snip='ע:**\n- ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.463
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=178
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.475
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.477
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='ני'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.484
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=8 rawTotalLen=186
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.526
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.528
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='ית J'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.579
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.580
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip='CL **'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.592
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=188
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.613
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.614
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='RUN'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.631
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=192
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.659
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.661
+!MESSAGE [DIAG] text_delta idx=1 len=9 snip='HMR91** ע'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.692
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=197
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.707
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.708
+!MESSAGE [DIAG] text_delta idx=1 len=10 snip='ם 2 STEPs:'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.740
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=200
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.751
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.753
+!MESSAGE [DIAG] text_delta idx=1 len=7 snip='\n  - **'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.784
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=9 rawTotalLen=209
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.796
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.798
+!MESSAGE [DIAG] text_delta idx=1 len=8 snip='STEP01**'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.804
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=10 rawTotalLen=219
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.822
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=7 rawTotalLen=226
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.842
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.844
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' —'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.869
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=8 rawTotalLen=234
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.889
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.900
+!MESSAGE [DIAG] text_delta idx=1 len=13 snip=' pre-process:'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.937
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.939
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.950
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=236
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.990
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.991
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ר'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:53.997
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=13 rawTotalLen=249
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.028
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.030
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ח'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.066
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=251
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.080
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.082
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='בת ר'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.117
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=252
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.140
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.141
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ש'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.153
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=253
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.169
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.172
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='ומה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.197
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=257
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.214
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.216
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' מ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.225
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=258
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.291
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=261
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.307
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.309
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='-190'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.310
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=263
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.354
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.355
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip=' '
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.384
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=267
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.402
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.403
+!MESSAGE [DIAG] text_delta idx=1 len=7 snip='ל-206 ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.441
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=268
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.444
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.446
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ת'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.491
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.493
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='ים ('
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.511
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=7 rawTotalLen=275
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.523
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=276
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.542
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.543
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ע'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.614
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=280
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.630
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.631
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='ם ת'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.634
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.635
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.646
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=281
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.680
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.681
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='קו'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.708
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=284
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.722
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=285
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.723
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.725
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='ני'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.774
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=287
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.791
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=289
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.816
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.817
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip=' '
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.863
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.864
+!MESSAGE [DIAG] text_delta idx=1 len=8 snip='IFTHEN ל'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.902
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=290
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.909
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.910
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='א'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.913
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=8 rawTotalLen=298
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.958
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=299
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.959
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:54.960
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='פ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.002
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.002
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ס'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.012
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=300
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.034
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=301
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.047
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.048
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='ים ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.094
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.095
+!MESSAGE [DIAG] text_delta idx=1 len=12 snip='ינאריים)\n  -'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.134
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=305
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.140
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.142
+!MESSAGE [DIAG] text_delta idx=1 len=16 snip=' **STEP02** — IN'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.175
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=12 rawTotalLen=317
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.189
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=16 rawTotalLen=333
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.193
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.194
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='REC+'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.237
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.239
+!MESSAGE [DIAG] text_delta idx=1 len=12 snip='OUTREC לפורמ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.241
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=337
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.293
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=12 rawTotalLen=349
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.361
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.362
+!MESSAGE [DIAG] text_delta idx=1 len=13 snip='ט DB2 LOAD (מ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.363
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.364
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.374
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.375
+!MESSAGE [DIAG] text_delta idx=1 len=10 snip='פוי שדות ל'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.409
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=13 rawTotalLen=362
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.421
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.423
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ט'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.451
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=363
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.465
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.466
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='בלה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.470
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=10 rawTotalLen=373
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.484
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=374
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.517
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.519
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip=')'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.538
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=377
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.559
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.560
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='\n- ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.594
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=378
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.606
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.608
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='ני'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.619
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=382
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.648
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.653
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='ית ט'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.660
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=384
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.703
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.704
+!MESSAGE [DIAG] text_delta idx=1 len=6 snip='בלת DB'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.708
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=388
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.745
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.746
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='2 `'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.767
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=6 rawTotalLen=394
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.785
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=397
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.797
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.799
+!MESSAGE [DIAG] text_delta idx=1 len=11 snip='CSTBCS91` ל'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.835
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.836
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='פ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.843
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=11 rawTotalLen=408
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.861
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=409
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.879
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.881
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.925
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.927
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' מ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:55.948
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=410
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.007
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=412
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.027
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.028
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ב'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.069
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=413
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.084
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.086
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='נה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.113
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=415
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.136
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.138
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip=' CS'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.182
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.183
+!MESSAGE [DIAG] text_delta idx=1 len=6 snip='BNKMT5'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.190
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=418
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.244
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.246
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip='\n\n**ס'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.252
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=6 rawTotalLen=424
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.273
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.274
+!MESSAGE [DIAG] text_delta idx=1 len=7 snip='טטוס:**'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.295
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=429
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.317
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.318
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip=' '
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.342
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=7 rawTotalLen=436
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.394
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=437
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.414
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.415
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='✅ ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.455
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=440
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.456
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.457
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='וש'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.501
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.503
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='לם'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.527
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=442
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.550
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.552
+!MESSAGE [DIAG] text_delta idx=1 len=8 snip='\n\n---\n\nא'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.578
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=444
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.595
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.596
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ם'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.634
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=8 rawTotalLen=452
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.640
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.641
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip=' אתה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.655
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=453
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.687
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.688
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' צ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.693
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=457
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.735
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.736
+!MESSAGE [DIAG] text_delta idx=1 len=5 snip='ריך פ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.778
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=459
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.780
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.781
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='יר'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.825
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.827
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='וט'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.836
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=5 rawTotalLen=464
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.855
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=466
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.871
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.872
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip=' על'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.906
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=468
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.918
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.919
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' ש'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.947
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=471
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.963
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.965
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='דות '
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:56.988
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=473
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.011
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.012
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='ספ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.049
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=477
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.074
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.075
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='צי'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.099
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=479
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.106
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.108
+!MESSAGE [DIAG] text_delta idx=1 len=7 snip='פיים, מ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.139
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=481
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.165
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.166
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.168
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=7 rawTotalLen=488
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.196
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.198
+!MESSAGE [DIAG] text_delta idx=1 len=3 snip='פוי'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.228
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=489
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.242
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.243
+!MESSAGE [DIAG] text_delta idx=1 len=7 snip='ים, או '
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.278
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=3 rawTotalLen=492
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.289
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.291
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ה'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.327
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=7 rawTotalLen=499
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.337
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.338
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='-J'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.366
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=500
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.392
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.394
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=502
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.394
+!MESSAGE [DIAG] text_delta idx=1 len=4 snip='CL ע'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.448
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=4 rawTotalLen=506
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.479
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.481
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='צ'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.482
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.483
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip='מו'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.524
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.525
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' —'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.544
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=507
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.556
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=509
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.586
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.587
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' א'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.615
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.616
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ג'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.619
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=511
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.639
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=513
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.660
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.661
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.698
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=514
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.708
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.710
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='ד'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.729
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=515
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.751
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.752
+!MESSAGE [DIAG] text_delta idx=1 len=2 snip=' ל'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.773
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=516
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.797
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.798
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='י'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.833
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=2 rawTotalLen=518
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.866
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_delta idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.867
+!MESSAGE [DIAG] text_delta idx=1 len=1 snip='.'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.883
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=519
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.891
+!MESSAGE [DIAG-MSG] model=1654887749 recv=AssistantMessage
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.892
+!MESSAGE [DIAG] handleAssistantMessage: usingStreamEvents=true currentStreamingBlock=true preview='הנה הסיכום של המרת ה-91:\n\n---\n\n## RUNHMR'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.893
+!MESSAGE [DIAG] handleAssistantMessage SKIPPED: usingStreamEvents=true
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.895
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=content_block_stop idx=1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.930
+!MESSAGE [DIAG] StreamingTextWidget.appendText deltaLen=1 rawTotalLen=520
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.943
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=message_delta idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.944
+!MESSAGE [DIAG-MSG] model=1654887749 recv=StreamEvent eventType=message_stop idx=0
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:57.945
+!MESSAGE [DIAG-TIMING] T2 onAssistantMessageCompleted +29185ms hasRunningTools=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:04:58.002
+!MESSAGE [DIAG] StreamingTextWidget.finalizeContent rawLen=520 exactHalfDup=false head='הנה הסיכום של המרת ה-91:\n\n---\n\n## RUNHMR91 — המרת CSBNKMT5 → CSTBCS91\n\n**קלט:** VSAM `CSBNKMT5` (אינדקס כספומטים), LRECL' tail='BCS91` לפי מבנה CSBNKMT5\n\n**סטטוס:** ✅ הושלם\n\n---\n\nאם אתה צריך פירוט על שדות ספציפיים, מיפויים, או ה-JCL עצמו — אגיד לי.'
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:05:01.871
+!MESSAGE [DIAG-MSG] model=1654887749 recv=ResultMessage subtype=success isError=false
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:05:01.873
+!MESSAGE [DIAG] handleResult: subtype=success isError=false cost=0.0 duration=33097ms turns=2 resultLen=520 resultPreview='הנה הסיכום של המרת ה-91:\n\n---\n\n## RUNHMR91 — המרת CSBNKMT5 → CSTBCS91\n\n**קלט:** VSAM `CSBNKMT5` (אינדקס כספומטים), LRECL' sessionId=945139d7-86b6-456f-ab15-9a0edc4f0ab1
+
+!ENTRY com.anthropic.eclipse.claude 1 0 2026-05-24 10:05:01.874
+!MESSAGE [DIAG-TIMING] T3 onResultReceived +33114ms
