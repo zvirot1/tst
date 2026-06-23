@@ -1,0 +1,275 @@
+# Configuration originally created by Create HTTP Server wizard on Thu Mar 17 14:35:42 GMT+02:00 2016
+LoadModule proxy_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule proxy_http_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule proxy_connect_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule proxy_ftp_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule proxy_balancer_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule lbmethod_bybusyness_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule lbmethod_bytraffic_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+LoadModule lbmethod_byrequests_module /QSYS.LIB/QHTTPSVR.LIB/QZSRCORE.SRVPGM
+Listen *:8600
+DocumentRoot /www/irest/htdocs
+TraceEnable Off
+Options -ExecCGI -FollowSymLinks -Includes -IncludesNoExec -Indexes -MultiViews
+LogFormat "%h %T %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%{Cookie}n \"%r\" %t" cookie
+LogFormat "%{User-agent}i" agent
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%h %l %u %t \"%r\" %>s %b" common
+CustomLog logs/access_log combined
+LogMaint logs/access_log 7 0
+LogMaint logs/error_log 7 0
+SetEnvIf "User-Agent" "Mozilla/2" nokeepalive
+SetEnvIf "User-Agent" "JDK/1\.0" force-response-1.0
+SetEnvIf "User-Agent" "Java/1\.0" force-response-1.0
+SetEnvIf "User-Agent" "RealPlayer 4\.0" force-response-1.0
+SetEnvIf "User-Agent" "MSIE 4\.0b2;" nokeepalive
+SetEnvIf "User-Agent" "MSIE 4\.0b2;" force-response-1.0
+#DefaultType text/xml
+SetEnv chgtoccsid 424
+SetEnv align Right
+SetEnv fromccsid 62235
+SetEnv DIRECTION true
+SetEnv toccsid 00424
+SetEnv parseccsid 62211
+SetEnv logLevel 2
+SetEnv maxfd 203
+SetEnv timeOut 
+SetEnv maxAct
+SetEnv VLDTOKEN true
+#SEtEnv COMPANY MIGDALDEV
+setEnv CUSTOM_HEADERS  HTTP_MIGDALORGHEADER    
+
+
+AddDefaultCharset UTF-8
+#AddDefaultCharset ISO-8859-8
+DefaultFsCCSID 62211
+DefaultNetCCSID 1208
+SendBufferSize 0
+ReceiveBufferSize 0
+FileETag +INode +MTime +Size
+#DefaultFsCCSID 424
+#DefaultNetCCSID 916
+#Header Always Set Access-Control-Allow-Credential true
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+RewriteEngine On                  
+RewriteCond %{REQUEST_METHOD} OPTIONS 
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# >>> ADDED CHANGE - START (2026-06-23, not in original httpconf.txt) >>>
+# --- utuser path-prefix support (optional) ---
+# /utuser/<userid>/js/...  -> capture <userid> into the HTTP_UTUSER header,
+# strip the /utuser/<userid> prefix, and route /js/... exactly as before.
+RewriteRule ^/utuser/([A-Za-z0-9#$@_]{1,32})/(js/.*)$  /$2  [E=UTUSER:$1,PT,L]
+RequestHeader set utuser "%{UTUSER}e"          env=UTUSER
+RequestHeader set utuser "%{REDIRECT_UTUSER}e" env=REDIRECT_UTUSER
+# <<< ADDED CHANGE - END (2026-06-23) <<<    
+
+#Header always set Access-Control-Allow-Origin "*"                   
+#Header always set Access-Control-Allow-Methods "POST, GET, PUT, OPTIONS, PATCH, DELETE" 
+#Header always set Access-Control-Allow-Headers "X-Accept-Charset,X-Accept,Content-Type"
+#RewriteEngine On                  
+#RewriteCond %{REQUEST_METHOD} OPTIONS 
+##RewriteRule ^(.*)$ $1 [R=200,L,E=HTTP_ORIGIN:%{HTTP_ORIGIN}]
+#RewriteRule ^(.*)$ $1  [R=200] 
+
+SetEnvIf Authorization "(.*)" XID=$1
+
+RequestHeader set UP "%{XID}e" 
+ErrorDocument 401 /401.json
+ErrorDocument 404 /404.json
+AccessFileName .htaccess
+CGIJobCCSID 62211
+CGIConvMode %%MIXED/MIXED%%
+DirectoryIndex index.html
+<Directory />
+   Order Deny,Allow
+   Deny From all
+#ERROR#    Header always Always Set Access-Control-Allow-Credential env=true
+#ERROR#    Header always Always Set Access-Control-Allow-Origin env=*
+</Directory>
+<Directory /www/irest/htdocs>
+   Order Allow,Deny
+   Allow From all
+</Directory>
+#<Location />
+#Require All granted
+#Header set Access-Control-Allow-Origin "*"
+#</Location>
+<Location />
+  order allow,deny
+  allow from all
+Header set Access-Control-Allow-Origin "*"
+</Location>
+<Directory /home/swagger>
+   Options All Indexes FollowSymLinks MultiViews
+   Order Allow,Deny
+   Allow From all
+</Directory>
+
+<Directory /home/js/pcml/swagger>
+   Options All Indexes FollowSymLinks MultiViews
+   Order Allow,Deny
+   Allow From all
+</Directory>
+
+
+
+Alias /swaggerApi/ /home/api/swagger/
+#Alias /swagger/ /home/js/pcml/swagger/
+Alias /swagger/ /home/js/swagger/
+
+Alias /swaggerConnvert/ /home/api/connvert/
+Alias /swaggerApi2/ /home/api2/swagger/
+
+<Directory /home/js/swagger>
+   Options All Indexes FollowSymLinks MultiViews
+   Order Allow,Deny
+   Allow From all
+</Directory>
+Alias /swagger/ /home/js/swagger/
+
+
+
+
+<Directory /QSYS.LIB/JSXS.LIB>
+   # >>> ADDED CHANGE - START (2026-06-23, not in original httpconf.txt) >>>
+   # Make REQUEST_URI reflect the stripped /js/... path (drop the /utuser/<user> prefix).
+   # Requires Apache (IBM HTTP Server for i) 2.4.21+. If the instance fails to start with
+   # "Invalid command 'CGIVar'", the build is older -- remove this line (REQUEST_URI then
+   # keeps the prefix; SCRIPT_NAME is already clean and can be used instead).
+   CGIVar REQUEST_URI current-uri
+   # <<< ADDED CHANGE - END (2026-06-23) <<<
+     SetEnvIf Request_URI ^/js/dev/  QIBM_CGI_LIBRARY_LIST="LBSTNETA;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+     SetEnvIf Request_URI ^/js/neta/  QIBM_CGI_LIBRARY_LIST="NETARO;LBSTNETA;YAJLLIBIRT;LIBHTTPIRT;JSXS;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD"  
+     SetEnvIf Request_URI ^/js/ELM/  QIBM_CGI_LIBRARY_LIST="NETARO;LBSTNETA;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS"
+    
+     SetEnvIf Request_URI ^/js/sandboxBaseI/  QIBM_CGI_LIBRARY_LIST="NETARO;LBSTNETA;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+     SetEnvIf Request_URI ^/js/sandboxBaseQ/  QIBM_CGI_LIBRARY_LIST="NETARO;LBSTNETA;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+     SetEnvIf Request_URI ^/js/sandboxBase/  QIBM_CGI_LIBRARY_LIST="NETARO;LBSTNETA;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+
+     SetEnvIf Request_URI ^/js/tviotbriutBaseI/  QIBM_CGI_LIBRARY_LIST="TSNSNBINTG;TSNSNBQUA;SNLIB;SNFILE;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+     SetEnvIf Request_URI ^/js/tviotbriutBaseQ/  QIBM_CGI_LIBRARY_LIST="TSNSNBQUA;SNLIB;SNFILE;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+     SetEnvIf Request_URI ^/js/tviotbriutBase/  QIBM_CGI_LIBRARY_LIST="SNLIB;SNFILE;QGPL;YAJLLIBIRT;QTEMP;LIBHTTPIRT;JSXS" 
+     
+#     SetEnvIf Request_URI ^/js/tvelm/  QIBM_CGI_LIBRARY_LIST="LBST323364;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;YAJLLIBIRT;LIBHTTPIRT;JSXS" 
+      SetEnvIf Request_URI ^/js/tvelm/  QIBM_CGI_LIBRARY_LIST="LIBMNG;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS" 
+      SetEnvIf Request_URI ^/js/tvelm1/  QIBM_CGI_LIBRARY_LIST="LBST332343;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS" 
+      SetEnvIf Request_URI ^/js/tvelm2/  QIBM_CGI_LIBRARY_LIST="LBST325324;LBST332343;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS"
+      SetEnvIf Request_URI ^/js/tvelm3/  QIBM_CGI_LIBRARY_LIST="LBST250331;LBST323364;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS" 
+      SetEnvIf Request_URI ^/js/tvelm4/  QIBM_CGI_LIBRARY_LIST="LBST345070;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS" 
+      SetEnvIf Request_URI ^/js/tvelm5/  QIBM_CGI_LIBRARY_LIST="netaro;LBST323759;LBSTVNEW;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;LIBMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS" 
+      SetEnvIf Request_URI ^/js/tvdev/   QIBM_CGI_LIBRARY_LIST="LIBMNG;LBSTIREST;LBSTVIOT;LBFTOR;LBFTVIOT;YAJLLIBIRT;LIBHTTPIRT;FILHVMGHFK;HFTVL;HFLIB;QTEMP;QGPL;QCBL;QRPG;UTIL;FILMNG;TFMASTER;FILHVST;FIL80GST;SNFILE;SNLIB;LIBTEUD;JSXS" 
+      SetEnvIf Request_URI ^/js/hafakaRelese1/  QIBM_CGI_LIBRARY_LIST="YAJLLIBIRT;LIBHTTPIRT;JSXS;QTEMP;FILHVMG;FILMNG;LBFTVIOT;SNFILE;ELBPR;HFLIB;GVLIBN;LIBMENU;LBSTVNEW;LBSTVIOT;QGPL;ISOLIB;ISOHTM;CGIDEV2;LIBHTTP;HITUMQRY;WSDL2RPG;APPPWD"
+      SetEnvIf Request_URI ^/js/hafakaRelese1D/  QIBM_CGI_LIBRARY_LIST="YAJLLIBIRT;LIBHTTPIRT;JSXS;QTEMP;FILHVMG;FILMNG;LBFTVIOT;SNFILE;ELBPR;HFLIB;GVLIBN;LIBMENU;LBSTVNEW;LBSTVIOT;QGPL;ISOLIB;ISOHTM;CGIDEV2;LIBHTTP;HITUMQRY;WSDL2RPG;APPPWD"
+ Options +ExecCGI
+    AuthName "irest"
+    AuthType Basic
+ PasswdFile %%SYSTEM%%
+ UserID %%CLIENT%%
+  Require valid-user
+  Order Allow,Deny
+  Allow From All
+</Directory>
+#ScriptAlias /js/ /QSYS.LIB/JSXS.LIB/
+
+
+
+#ScriptAliasMatch /rest/([a-z0-9]+)/.* /qsys.lib/JSXS.lib/$1.pgm
+
+#ScriptAliasMatch /js/([a-z0-9]+)/([a-z0-9]+) /qsys.lib/JSXS.lib/$2.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+ScriptAliasMatch /js/([a-z0-9]+)/([a-z0-9]+) /qsys.lib/JSXS.lib/$2.pgm
+
+
+
+
+#ScriptAliasMatch /rest/([a-z0-9]+)/.* /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+)/.* /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+)/pgm/([a-z0-9]+)/ /qsys.lib/JSXS.lib/irest.pgm
+#ScriptAliasMatch /js/([a-z0-9]+)/api/([a-z0-9]+)/ /qsys.lib/JSXS.lib/irest.pgm
+
+#ScriptAliasMatch /js/([a-z0-9]+)/([a-z0-9]+) /qsys.lib/JSXS.lib/$2.pgm
+
+
+
+#Header add Set-Cookie "ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/" env=BALANCER_ROUTE_CHANGED
+#<Proxy "balancer://js/gr">
+#    BalancerMember "http://127.0.0.1:8601" 
+#    BalancerMember "http://127.0.0.1:8602" 
+#</Proxy>
+
+#ProxyPass        "/js/gr" "balancer://js/gr"
+#ProxyPassReverse "/js/gr" "balancer://js/gr"
+
+#ProxyPass /js/gr http://127.0.0.1:8601/js/gr
+#ProxyPassReverse /js/gr http://127.0.0.1:8601/js/gr
+#ProxyPass /RpgJsonWeb http://127.0.0.1:8084/RpgJsonWeb
+#ProxyPassReverse /RpgJsonWeb http://127.0.0.1:8084/RpgJsonWeb
+#ProxyPass /js/gr/swagger http://127.0.0.1:8080/ApiList/rest/swagger
+#ProxyPassReverse /js/gr/swagger http://127.0.0.1:8080/ApiList/rest/swagger
+ProxyPass /ApiList http://127.0.0.1:8080/ApiList/rest/swagger retry=0
+ProxyPassReverse /ApiList http://127.0.0.1:8080/ApiList/rest/swagger
+
+
+ProxyPreserveHost On
+
+# Options +ExecCGI
+#    AuthName "irest"
+#    AuthType Basic
+# PasswdFile %%SYSTEM%%
+# UserID %%CLIENT%%
+#  Require valid-user
+#  Order Allow,Deny
+#  Allow From All
+#</Directory>
+#ScriptAlias /js/ /QSYS.LIB/JSXS.LIB/
+
+
+
+#ScriptAliasMatch /rest/([a-z0-9]+)/.* /qsys.lib/JSXS.lib/$1.pgm
+
+#ScriptAliasMatch /js/([a-z0-9]+)/([a-z0-9]+) /qsys.lib/JSXS.lib/$2.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+ScriptAliasMatch /js/([a-z0-9]+)/([a-z0-9]+) /qsys.lib/JSXS.lib/$2.pgm
+
+
+
+
+#ScriptAliasMatch /rest/([a-z0-9]+)/.* /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+)/.* /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+) /qsys.lib/JSXS.lib/$1.pgm
+#ScriptAliasMatch /js/([a-z0-9]+)/pgm/([a-z0-9]+)/ /qsys.lib/JSXS.lib/irest.pgm
+#ScriptAliasMatch /js/([a-z0-9]+)/api/([a-z0-9]+)/ /qsys.lib/JSXS.lib/irest.pgm
+
+#ScriptAliasMatch /js/([a-z0-9]+)/([a-z0-9]+) /qsys.lib/JSXS.lib/$2.pgm
+
+
+
+#Header add Set-Cookie "ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/" env=BALANCER_ROUTE_CHANGED
+#<Proxy "balancer://js/gr">
+#    BalancerMember "http://127.0.0.1:8601" 
+#    BalancerMember "http://127.0.0.1:8602" 
+#</Proxy>
+
+#ProxyPass        "/js/gr" "balancer://js/gr"
+#ProxyPassReverse "/js/gr" "balancer://js/gr"
+
+#ProxyPass /js/gr http://127.0.0.1:8601/js/gr
+#ProxyPassReverse /js/gr http://127.0.0.1:8601/js/gr
+#ProxyPass /RpgJsonWeb http://127.0.0.1:8084/RpgJsonWeb
+#ProxyPassReverse /RpgJsonWeb http://127.0.0.1:8084/RpgJsonWeb
+#ProxyPass /js/gr/swagger http://127.0.0.1:8080/ApiList/rest/swagger
+#ProxyPassReverse /js/gr/swagger http://127.0.0.1:8080/ApiList/rest/swagger
+ProxyPass /ApiList http://127.0.0.1:8080/ApiList/rest/swagger retry=0
+ProxyPassReverse /ApiList http://127.0.0.1:8080/ApiList/rest/swagger
+
+
+ProxyPreserveHost On
