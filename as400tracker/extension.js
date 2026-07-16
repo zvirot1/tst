@@ -3,269 +3,238 @@ const fs = require('fs');
 const path = require('path');
 
 let outputChannel;
+let isUpdatingFromWatcher = false;
+let isWritingToAmazonq = false;
 
 function activate(context) {
-    outputChannel = vscode.window.createOutputChannel('IBM i Active File Tracker');
-    outputChannel.appendLine('IBM i Active File Tracker activated');
-    console.log('IBM i Active File Tracker activated');
-
-    // Register command to apply text edits
-    const applyEditsCommand = vscode.commands.registerCommand('ibmi-active-file-tracker.applyEdits', async (edits) => {
-        const editor = vscode.window.activeTextEditor;
-        if (!editor) {
-            return { success: false, error: 'No active editor' };
-        }
-
-        try {
-            const success = await editor.edit(editBuilder => {
-                for (const edit of edits) {
-                    const document = editor.document;
-                    const text = document.getText();
-                    
-                    // Find the old text in the document
-                    const startOffset = text.indexOf(edit.oldText);
-                    if (startOffset === -1) {
-                        throw new Error(`Text not found: ${edit.oldText.substring(0, 50)}...`);
-                    }
-                    
-                    const startPos = document.positionAt(startOffset);
-                    const endPos = document.positionAt(startOffset + edit.oldText.length);
-                    const range = new vscode.Range(startPos, endPos);
-                    
-                    editBuilder.replace(range, edit.newText);
-                }
-            });
-            
-            return { success };
-        } catch (error) {
-            return { success: false, error: error.message };
-        }
-    });
+    outputChannel = vscode.window.createOutputChannel('IBM i Tracker');
+    outputChannel.appendLine('IBM i Tracker activated!');
     
-    context.subscriptions.push(applyEditsCommand);
-
-    const updateActiveFile = async (editor) => {
-        if (!editor) {
-            outputChannel.appendLine('No active editor');
+    // Write editor content to .amazonq
+    const writeToAmazonq = (editor) => {
+        if (!editor) return;
+        if (isUpdatingFromWatcher) {
+            outputChannel.appendLine('[SKIP] isUpdatingFromWatcher = true');
             return;
         }
-
+        
         const uri = editor.document.uri;
-        outputChannel.appendLine(`Active editor changed: scheme=${uri.scheme}, path=${uri.path}, fsPath=${uri.fsPath}`);
+        outputChannel.appendLine(`[WRITE] scheme: ${uri.scheme}, path: ${uri.path}`);
         
-        // Check if this is an IBM i member or streamfile
-        // Support both Code for IBM i (member/streamfile) and Rocket DevOps (rdomember)
-        const isIBMiScheme = uri.scheme === 'member' || uri.scheme === 'streamfile' || uri.scheme === 'rdomember';
-        const isRocketFile = uri.scheme === 'file' && (uri.path.includes('/QSYS.LIB/') || uri.path.includes('\\QSYS.LIB\\'));
+        // Check if IBM i file
+        const isIBMi = uri.scheme === 'member' || uri.scheme === 'rdomember';
+        const isRocket = uri.scheme === 'file' && uri.path.includes('/QSYS.LIB/');
         
-        outputChannel.appendLine(`isIBMiScheme=${isIBMiScheme}, isRocketFile=${isRocketFile}`);
-        
-        if (!isIBMiScheme && !isRocketFile) {
-            outputChannel.appendLine('Not an IBM i file, skipping');
+        if (!isIBMi && !isRocket) {
+            outputChannel.appendLine('[SKIP] Not an IBM i file');
             return;
         }
-
-        try {
-            // Parse IBM i URI
-            const uriPath = uri.path;
-            let library = '';
-            let sourceFile = '';
-            let member = '';
-            
-            if (uri.scheme === 'member' || uri.scheme === 'rdomember') {
-                // member://library/sourcefile/member or rdomember://library/sourcefile/member
-                const parts = uriPath.split('/').filter(p => p);
-                if (parts.length >= 3) {
-                    library = parts[0];
-                    sourceFile = parts[1];
-                    member = parts[2];
-                }
-            } else if (isRocketFile) {
-                // Rocket DevOps: file:///QSYS.LIB/LIBRARY.LIB/SOURCEFILE.FILE/MEMBER.MBR
-                const match = uriPath.match(/\/QSYS\.LIB\/([^\/]+)\.LIB\/([^\/]+)\.FILE\/([^\/]+)\.MBR/i) ||
-                             uriPath.match(/\\QSYS\.LIB\\([^\\]+)\.LIB\\([^\\]+)\.FILE\\([^\\]+)\.MBR/i);
-                if (match) {
-                    library = match[1];
-                    sourceFile = match[2];
-                    member = match[3];
-                }
-            }
-
-            if (!library || !sourceFile || !member) {
-                return;
-            }
-
-            // Get current content (including unsaved changes)
-            const content = editor.document.getText();
-            const isDirty = editor.document.isDirty;
-
-            // Prepare data
-            const activeFileData = {
-                library,
-                sourceFile,
-                member,
-                content,
-                isDirty,
-                timestamp: new Date().toISOString()
-            };
-
-            // Write to .amazonq/active-file.json
-            const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-            if (workspaceFolder) {
-                const amazonqDir = path.join(workspaceFolder.uri.fsPath, '.amazonq');
-                const activeFilePath = path.join(amazonqDir, 'active-file.json');
-
-                // Create .amazonq directory if it doesn't exist
-                if (!fs.existsSync(amazonqDir)) {
-                    fs.mkdirSync(amazonqDir, { recursive: true });
-                }
-
-                // Write the file
-                fs.writeFileSync(activeFilePath, JSON.stringify(activeFileData, null, 2));
-            }
-        } catch (error) {
-            console.error('Error updating active file:', error);
+        
+        let library, sourceFile, member;
+        
+        if (isIBMi) {
+            const parts = uri.path.split('/').filter(p => p);
+            if (parts.length < 3) return;
+            [library, sourceFile, member] = parts;
+        } else if (isRocket) {
+            const match = uri.path.match(/\/QSYS\.LIB\/([^\/]+)\.LIB\/([^\/]+)\.FILE\/([^\/]+)\.MBR/i);
+            if (!match) return;
+            [, library, sourceFile, member] = match;
         }
-    };
-
-    // Track active editor changes
-    context.subscriptions.push(
-        vscode.window.onDidChangeActiveTextEditor(updateActiveFile)
-    );
-
-    // Track document changes (for unsaved edits)
-    context.subscriptions.push(
-        vscode.workspace.onDidChangeTextDocument(event => {
-            if (vscode.window.activeTextEditor?.document === event.document) {
-                updateActiveFile(vscode.window.activeTextEditor);
-            }
-        })
-    );
-
-    // Initial update
-    updateActiveFile(vscode.window.activeTextEditor);
-
-    // Watch for changes to active-file.json
-    const watchPath = path.join(vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || '', '.amazonq');
-    outputChannel.appendLine(`Watching for changes at: ${watchPath}`);
-    
-    const watcher = fs.watch(watchPath, { recursive: true }, (eventType, filename) => {
-        outputChannel.appendLine(`File change detected: ${eventType} - ${filename}`);
-        if (filename === 'edit-request.json') {
-            outputChannel.appendLine('Edit request detected, handling...');
-            setTimeout(() => handleEditRequest(), 50);
-        }
-        // Sync editor when member file changes (from external process like Claude MCP)
-        if (filename &&
-            filename !== 'active-file.json' &&
-            !filename.includes('edit-') &&
-            !filename.includes('diff-')) {
-            outputChannel.appendLine(`Member file changed externally: ${filename}`);
-            setTimeout(() => syncEditorFromFile(), 200);
-        }
-    });
-    
-    context.subscriptions.push({ dispose: () => watcher.close() });
-}
-
-async function updateEditorFromJson() {
-    try {
+        
         const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
         if (!workspaceFolder) return;
         
-        const activeFilePath = path.join(workspaceFolder.uri.fsPath, '.amazonq', 'active-file.json');
-        if (!fs.existsSync(activeFilePath)) return;
+        const dir = path.join(workspaceFolder.uri.fsPath, '.amazonq', library, sourceFile);
+        const filePath = path.join(dir, member);
         
-        const activeFileData = JSON.parse(fs.readFileSync(activeFilePath, 'utf-8'));
-        const editor = vscode.window.activeTextEditor;
-        
-        if (!editor) return;
-        
-        // Check if this is the same file
-        const uri = editor.document.uri;
-        if (uri.scheme !== 'member') return;
-        
-        const uriPath = uri.path;
-        const parts = uriPath.split('/').filter(p => p);
-        if (parts.length < 3) return;
-        
-        const [library, sourceFile, member] = parts;
-        
-        if (library !== activeFileData.library || 
-            sourceFile !== activeFileData.sourceFile || 
-            member !== activeFileData.member) {
-            return;
-        }
-        
-        // Update editor content
-        const currentContent = editor.document.getText();
-        if (currentContent !== activeFileData.content) {
-            await editor.edit(editBuilder => {
-                const firstLine = editor.document.lineAt(0);
-                const lastLine = editor.document.lineAt(editor.document.lineCount - 1);
-                const fullRange = new vscode.Range(firstLine.range.start, lastLine.range.end);
-                editBuilder.replace(fullRange, activeFileData.content);
-            });
-            outputChannel.appendLine('Editor updated from JSON');
-        }
-    } catch (error) {
-        outputChannel.appendLine(`Error updating editor: ${error.message}`);
-    }
-}
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+        isWritingToAmazonq = true;
+        fs.writeFileSync(filePath, editor.document.getText());
 
-async function handleEditRequest() {
-    try {
-        const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-        if (!workspaceFolder) {
-            outputChannel.appendLine('No workspace folder found');
-            return;
-        }
-        
-        const editRequestPath = path.join(workspaceFolder.uri.fsPath, '.amazonq', 'edit-request.json');
-        outputChannel.appendLine(`Looking for edit request at: ${editRequestPath}`);
-        
-        if (!fs.existsSync(editRequestPath)) {
-            outputChannel.appendLine('Edit request file does not exist');
-            return;
-        }
-        
-        const requestData = JSON.parse(fs.readFileSync(editRequestPath, 'utf-8'));
-        const { edits, requestId, beforePath, afterPath, backupPath } = requestData;
-        outputChannel.appendLine(`Processing ${edits.length} edit(s) for request ${requestId}`);
-        
-        // Show diff if paths provided
-        if (beforePath && afterPath && fs.existsSync(beforePath) && fs.existsSync(afterPath)) {
-            outputChannel.appendLine('Opening diff view...');
-            const beforeUri = vscode.Uri.file(beforePath);
-            const afterUri = vscode.Uri.file(afterPath);
+        // Write active-file.json
+        const activeFilePath = path.join(workspaceFolder.uri.fsPath, '.amazonq', 'active-file.json');
+        fs.writeFileSync(activeFilePath, JSON.stringify({ library, sourceFile, member }, null, 2));
+        setTimeout(() => { isWritingToAmazonq = false; }, 500);
+
+        outputChannel.appendLine(`[WRITE] ✅ ${library}/${sourceFile}/${member}`);
+    };
+    
+    // Track editor changes
+    context.subscriptions.push(
+        vscode.window.onDidChangeActiveTextEditor(writeToAmazonq),
+        vscode.workspace.onDidChangeTextDocument(e => {
+            if (e.document.uri.scheme === 'output') return;
+            if (vscode.window.activeTextEditor?.document === e.document) {
+                writeToAmazonq(vscode.window.activeTextEditor);
+            }
+        })
+    );
+    
+    // Initial write
+    writeToAmazonq(vscode.window.activeTextEditor);
+    
+    // Watch .amazonq directory using VS Code API (reliable for external process changes)
+    const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+    if (workspaceFolder) {
+        const watchPattern = new vscode.RelativePattern(workspaceFolder, '.amazonq/**/*');
+        outputChannel.appendLine(`[WATCH] Watching: ${workspaceFolder.uri.fsPath}/.amazonq/**/*`);
+
+        const watcher = vscode.workspace.createFileSystemWatcher(watchPattern);
+
+        const onFileChange = (uri) => {
+            if (isWritingToAmazonq) {
+                outputChannel.appendLine(`[WATCH] Skipping - own write`);
+                return;
+            }
+            const filename = uri.fsPath;
+            // Handle edit-request.json - apply edits directly to editor
+            if (filename.endsWith('edit-request.json')) {
+                outputChannel.appendLine(`[WATCH] Edit request detected: ${filename}`);
+                setTimeout(() => handleEditRequest(filename), 50);
+                return;
+            }
+            if (!filename.includes('active-file.json') &&
+                !filename.includes('rules') &&
+                !filename.includes('temp')) {
+                outputChannel.appendLine(`[WATCH] File changed externally: ${filename}`);
+                setTimeout(() => syncEditorFromFile(), 200);
+            }
+        };
+
+        watcher.onDidChange(onFileChange);
+        watcher.onDidCreate(onFileChange);
+
+        context.subscriptions.push(watcher);
+    }
+    
+    // Sync editor from .amazonq file
+    async function syncEditorFromFile() {
+        try {
+            const editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                outputChannel.appendLine('[SYNC] No active editor');
+                return;
+            }
             
-            await vscode.commands.executeCommand('vscode.diff', beforeUri, afterUri, 'Changes Preview');
+            const uri = editor.document.uri;
+            const isIBMi = uri.scheme === 'member' || uri.scheme === 'rdomember';
+            const isRocket = uri.scheme === 'file' && uri.path.includes('/QSYS.LIB/');
             
-            // Wait a bit for user to see the diff
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            if (!isIBMi && !isRocket) {
+                outputChannel.appendLine('[SYNC] Not an IBM i file');
+                return;
+            }
+            
+            let library, sourceFile, member;
+            
+            if (isIBMi) {
+                const parts = uri.path.split('/').filter(p => p);
+                if (parts.length < 3) return;
+                [library, sourceFile, member] = parts;
+            } else if (isRocket) {
+                const match = uri.path.match(/\/QSYS\.LIB\/([^\/]+)\.LIB\/([^\/]+)\.FILE\/([^\/]+)\.MBR/i);
+                if (!match) return;
+                [, library, sourceFile, member] = match;
+            }
+            
+            const workspaceFolder2 = vscode.workspace.workspaceFolders?.[0];
+            if (!workspaceFolder2) return;
+            
+            const memberFilePath = path.join(workspaceFolder2.uri.fsPath, '.amazonq', library, sourceFile, member);
+            if (!fs.existsSync(memberFilePath)) {
+                outputChannel.appendLine('[SYNC] File not found');
+                return;
+            }
+            
+            const fileContent = fs.readFileSync(memberFilePath, 'utf-8');
+            const editorContent = editor.document.getText();
+            
+            if (fileContent !== editorContent) {
+                outputChannel.appendLine('[SYNC] Contents differ - updating editor');
+                isUpdatingFromWatcher = true;
+                
+                await editor.edit(editBuilder => {
+                    const firstLine = editor.document.lineAt(0);
+                    const lastLine = editor.document.lineAt(editor.document.lineCount - 1);
+                    const fullRange = new vscode.Range(firstLine.range.start, lastLine.range.end);
+                    editBuilder.replace(fullRange, fileContent);
+                });
+                
+                outputChannel.appendLine('[SYNC] ✅ Editor updated');
+                setTimeout(() => { 
+                    isUpdatingFromWatcher = false;
+                    outputChannel.appendLine('[SYNC] isUpdatingFromWatcher = false');
+                }, 1000);
+            } else {
+                outputChannel.appendLine('[SYNC] Contents match - no update needed');
+            }
+        } catch (error) {
+            outputChannel.appendLine(`[SYNC] Error: ${error.message}`);
         }
-        
-        // Apply edits
-        const result = await vscode.commands.executeCommand('ibmi-active-file-tracker.applyEdits', edits);
-        outputChannel.appendLine(`Edit result: ${JSON.stringify(result)}`);
-        
-        // Write response
-        const responsePath = path.join(workspaceFolder.uri.fsPath, '.amazonq', 'edit-response.json');
-        fs.writeFileSync(responsePath, JSON.stringify({ requestId, backupPath, ...result }));
-        outputChannel.appendLine(`Response written to: ${responsePath}`);
-        
-        // Delete request file
-        fs.unlinkSync(editRequestPath);
-        outputChannel.appendLine('Request file deleted');
-    } catch (error) {
-        outputChannel.appendLine(`Error handling edit request: ${error.message}`);
-        console.error('Error handling edit request:', error);
+    }
+    
+    outputChannel.appendLine('IBM i Tracker ready!');
+
+    const isIBMiEditor = (e) => e && (
+        e.document.uri.scheme === 'member' ||
+        e.document.uri.scheme === 'rdomember' ||
+        (e.document.uri.scheme === 'file' && e.document.uri.path.includes('/QSYS.LIB/'))
+    );
+
+    async function handleEditRequest(requestFilePath) {
+        try {
+            if (!fs.existsSync(requestFilePath)) return;
+
+            const requestData = JSON.parse(fs.readFileSync(requestFilePath, 'utf-8'));
+            const { edits, requestId } = requestData;
+            outputChannel.appendLine(`[EDIT] Processing ${edits.length} edit(s), requestId=${requestId}`);
+
+            // Find IBM i editor - check active first, then all visible editors
+            let editor = vscode.window.activeTextEditor;
+            if (!isIBMiEditor(editor)) {
+                editor = vscode.window.visibleTextEditors.find(isIBMiEditor);
+            }
+            if (!editor) {
+                outputChannel.appendLine('[EDIT] No IBM i editor found');
+                return;
+            }
+
+            let success = false;
+            try {
+                success = await editor.edit(editBuilder => {
+                    for (const edit of edits) {
+                        const text = editor.document.getText();
+                        const startOffset = text.indexOf(edit.oldText);
+                        if (startOffset === -1) {
+                            throw new Error(`Text not found: ${edit.oldText.substring(0, 50)}`);
+                        }
+                        const startPos = editor.document.positionAt(startOffset);
+                        const endPos = editor.document.positionAt(startOffset + edit.oldText.length);
+                        editBuilder.replace(new vscode.Range(startPos, endPos), edit.newText);
+                    }
+                });
+                outputChannel.appendLine(`[EDIT] ✅ Editor updated, success=${success}`);
+            } catch (e) {
+                outputChannel.appendLine(`[EDIT] Error applying edits: ${e.message}`);
+                success = false;
+            }
+
+            // Write response immediately so MCP doesn't timeout
+            const responseFilePath = requestFilePath.replace('edit-request.json', 'edit-response.json');
+            isWritingToAmazonq = true;
+            fs.writeFileSync(responseFilePath, JSON.stringify({ requestId, success }));
+            setTimeout(() => { isWritingToAmazonq = false; }, 500);
+
+            // Delete request file
+            fs.unlinkSync(requestFilePath);
+            outputChannel.appendLine(`[EDIT] Response written`);
+        } catch (error) {
+            outputChannel.appendLine(`[EDIT] Error: ${error.message}`);
+        }
     }
 }
 
 function deactivate() {}
 
-module.exports = {
-    activate,
-    deactivate
-};
+module.exports = { activate, deactivate };
