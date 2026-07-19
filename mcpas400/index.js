@@ -158,7 +158,6 @@ function buildSshConnectOptions(config) {
         port: config.port,
         username: config.user,
         readyTimeout: 30000,
-        hostVerifier: () => true, // accept any host key (same as StrictHostKeyChecking=no)
     };
     if (config.privateKeyPath) {
         // Read key content directly - more reliable than privateKeyPath with some SSH servers
